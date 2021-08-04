@@ -12,8 +12,8 @@ namespace ConfGenerate
     {
         public static void Main(string[] args)
         {
-            const string inFilePath = @"F:\CodeFile\C#\ConfGenerate\ConfGenerate\in.txt";
-            const string outFilePath = @"F:\CodeFile\C#\ConfGenerate\ConfGenerate\out.txt";
+            const string inFilePath = @"F:\CodeFile\Project\FuGfConfig\ConfGenerate\ConfGenerate\in.txt";
+            const string outFilePath = @"F:\CodeFile\Project\FuGfConfig\ConfGenerate\ConfGenerate\out.txt";
 
             string line;
 
