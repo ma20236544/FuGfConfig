@@ -67,7 +67,6 @@ HOST,cr-status.iqiyi.com
 HOST,f74f7f7765f8a2f6.ngaa.net.cn
 HOST,ef-dongfeng.tanx.com
 HOST,iqiyim.adtrack.enlightent.cn
-HOST,t7z.cupid.iqiyi.com,DIRECT
 HOST,paopao-monitor.iqiyi.com
 HOST,puma-api.iqiyi.com
 HOST-SUFFIX,gdt.qq.com
