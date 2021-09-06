@@ -80,3 +80,14 @@ HOST,iqiyi-mipdx.cn.miaozhen.com
 HOST-SUFFIX,afdback.ppsimg.com
 HOST,optimus-ads.amap.com
 HOST,bid.adview.cn
+HOST-SUFFIX,dataflow.biliapi.com,REJECT
+HOST-SUFFIX,s.deepl.com,REJECT
+HOST-SUFFIX,ios.bugly.qq.com,REJECT
+HOST-SUFFIX,api.tusdk.com,REJECT
+HOST-SUFFIX,app.adjust.net.in,REJECT
+HOST-SUFFIX,app.adjust.world,REJECT
+HOST-SUFFIX,app.adjust.com,REJECT
+HOST-SUFFIX,p.qlogo.cn,REJECT
+HOST-SUFFIX,grpc.biliapi.net,REJECT
+HOST-SUFFIX,pay.bilibili.com,REJECT
+HOST-SUFFIX,graph.facebook.com,REJECT
