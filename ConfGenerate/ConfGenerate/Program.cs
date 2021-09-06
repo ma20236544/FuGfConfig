@@ -60,11 +60,13 @@ namespace ConfGenerate
             const string in1FilePath = @"F:\CodeFile\Project\FuGfConfig\ConfGenerate\ConfGenerate\in1.txt";
             const string in2FilePath = @"F:\CodeFile\Project\FuGfConfig\ConfGenerate\ConfGenerate\in2.txt";
             const string in3FilePath = @"F:\CodeFile\Project\FuGfConfig\ConfGenerate\ConfGenerate\in3.txt";
+            const string in4FilePath = @"F:\CodeFile\Project\FuGfConfig\ConfGenerate\ConfGenerate\in4.txt";
 
             var initReader = new StreamReader(initFilePath);
             var in1Reader = new StreamReader(in1FilePath);
             var in2Reader = new StreamReader(in2FilePath);
             var in3Reader = new StreamReader(in3FilePath);
+            var in4Reader = new StreamReader(in4FilePath);
 
 
             var data = new SortedSet<string>();
@@ -72,24 +74,32 @@ namespace ConfGenerate
             string line;
             while ((line = initReader.ReadLine()) != null)
             {
-                var s = line.Remove(line.LastIndexOf(','));
-                data.Add(s);
+                // var s = line.Remove(line.LastIndexOf(','));
+                data.Add(line);
             }
 
             initReader.Close();
-            line = string.Empty;
-            // while ((line = in1Reader.ReadLine()) != null)
-            // {
-            //     var s = line.Remove(line.LastIndexOf(','));
-            //     if (!data.Contains(s))
-            //     {
-            //         var _l = new StringBuilder();
-            //         _l.Append(s);
-            //         _l.Append(",CustomAdRules");
-            //         ans.Add(_l.ToString());
-            //     }
-            // }
-            //
+
+            for (var i = 2; i <= 4; i++)
+            {
+                line = string.Empty;
+                var filePath = $"F:\\CodeFile\\Project\\FuGfConfig\\ConfGenerate\\ConfGenerate\\in{i}.txt";
+                var reader = new StreamReader(filePath);
+                while ((line = reader.ReadLine()) != null)
+                {
+                    if (!data.Contains(line))
+                    {
+                        var _l = new StringBuilder();
+                        _l.Append(line);
+                        _l.Append(",REJECT");
+                        ans.Add(_l.ToString());
+                    }
+                }
+
+                reader.Close();
+            }
+
+
             // in1Reader.Close();
             //
             // while ((line = in2Reader.ReadLine()) != null)
@@ -105,18 +115,18 @@ namespace ConfGenerate
             // }
             //
             // in2Reader.Close();
-
-            while ((line = in3Reader.ReadLine()) != null)
-            {
-                var s = line;
-                if (!data.Contains(s))
-                {
-                    var _l = new StringBuilder();
-                    _l.Append(s);
-                    _l.Append(",CustomAdRules");
-                    ans.Add(_l.ToString());
-                }
-            }
+            //
+            // while ((line = in3Reader.ReadLine()) != null)
+            // {
+            //     var s = line;
+            //     if (!data.Contains(s))
+            //     {
+            //         var _l = new StringBuilder();
+            //         _l.Append(s);
+            //         _l.Append(",CustomAdRules");
+            //         ans.Add(_l.ToString());
+            //     }
+            // }
 
             var outWriter = new StreamWriter(outFilePath);
             foreach (var i in ans)
@@ -124,7 +134,7 @@ namespace ConfGenerate
                 outWriter.WriteLine(i);
             }
 
-            in3Reader.Close();
+            // in3Reader.Close();
             outWriter.Close();
 
             Console.WriteLine("完成");
