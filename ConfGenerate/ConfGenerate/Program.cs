@@ -99,42 +99,12 @@ namespace ConfGenerate
                 reader.Close();
             }
 
-
-            // in1Reader.Close();
-            //
-            // while ((line = in2Reader.ReadLine()) != null)
-            // {
-            //     var s = line.Remove(line.LastIndexOf(','));
-            //     if (!data.Contains(s))
-            //     {
-            //         var _l = new StringBuilder();
-            //         _l.Append(s);
-            //         _l.Append(",CustomAdRules");
-            //         ans.Add(_l.ToString());
-            //     }
-            // }
-            //
-            // in2Reader.Close();
-            //
-            // while ((line = in3Reader.ReadLine()) != null)
-            // {
-            //     var s = line;
-            //     if (!data.Contains(s))
-            //     {
-            //         var _l = new StringBuilder();
-            //         _l.Append(s);
-            //         _l.Append(",CustomAdRules");
-            //         ans.Add(_l.ToString());
-            //     }
-            // }
-
             var outWriter = new StreamWriter(outFilePath);
             foreach (var i in ans)
             {
                 outWriter.WriteLine(i);
             }
 
-            // in3Reader.Close();
             outWriter.Close();
 
             Console.WriteLine("完成");
