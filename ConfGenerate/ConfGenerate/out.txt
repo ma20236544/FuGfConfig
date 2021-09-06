@@ -546,7 +546,7 @@ HOST-SUFFIX,api.so.lianmeng.360.cn,REJECT
 HOST-SUFFIX,api.stack-sonar.com,REJECT
 HOST-SUFFIX,api.tr.blismedia.com,REJECT
 HOST-SUFFIX,api.tuisong.baidu.com,REJECT
-HOST-SUFFIX,api.tusdk.com,REJECT,REJECT
+HOST-SUFFIX,api.tusdk.com,REJECT
 HOST-SUFFIX,api.tw06.xlmc.sec.miui.com,REJECT
 HOST-SUFFIX,api.uniplayad.com,REJECT
 HOST-SUFFIX,api.viglink.com,REJECT
@@ -577,9 +577,9 @@ HOST-SUFFIX,app-lon07.marketo.com,REJECT
 HOST-SUFFIX,app-sj15.marketo.com,REJECT
 HOST-SUFFIX,app-sj30.marketo.com,REJECT
 HOST-SUFFIX,app.50bang.org,REJECT
-HOST-SUFFIX,app.adjust.com,REJECT,REJECT
-HOST-SUFFIX,app.adjust.net.in,REJECT,REJECT
-HOST-SUFFIX,app.adjust.world,REJECT,REJECT
+HOST-SUFFIX,app.adjust.com,REJECT
+HOST-SUFFIX,app.adjust.net.in,REJECT
+HOST-SUFFIX,app.adjust.world,REJECT
 HOST-SUFFIX,app.houyi.baofeng.net,REJECT
 HOST-SUFFIX,app.waps.cn,REJECT
 HOST-SUFFIX,app.wapx.cn,REJECT
@@ -1274,7 +1274,6 @@ HOST-SUFFIX,data.mistat.xiaomi.com,REJECT
 HOST-SUFFIX,data.video.qiyi.com,REJECT
 HOST-SUFFIX,databank.air.yoyi.com.cn,REJECT
 HOST-SUFFIX,databank.yoyi.com.cn,REJECT
-HOST-SUFFIX,dataflow.biliapi.com,REJECT,REJECT
 HOST-SUFFIX,daylskg.cn,REJECT
 HOST-SUFFIX,db1.fuz.cc,REJECT
 HOST-SUFFIX,db2.fuz.cc,REJECT
@@ -1844,11 +1843,11 @@ HOST-SUFFIX,gqecfgovxbj.com,REJECT
 HOST-SUFFIX,gqjyzoqme.com,REJECT
 HOST-SUFFIX,gquqjrbgaghpfq.com,REJECT
 HOST-SUFFIX,granticaffodily.club,REJECT
-HOST-SUFFIX,graph.facebook.com,REJECT,REJECT
+HOST-SUFFIX,graph.facebook.com,REJECT
 HOST-SUFFIX,greget3.com,REJECT
 HOST-SUFFIX,grievine.club,REJECT
 HOST-SUFFIX,groniwepa.pro,REJECT
-HOST-SUFFIX,grpc.biliapi.net,REJECT,REJECT
+HOST-SUFFIX,grpc.biliapi.net,REJECT
 HOST-SUFFIX,grykuutktgaun.com,REJECT
 HOST-SUFFIX,gs.m.cn.miaozhen.com,REJECT
 HOST-SUFFIX,gseyriwpozfxf.com,REJECT
@@ -2126,7 +2125,6 @@ HOST-SUFFIX,iodthosenad.fun,REJECT
 HOST-SUFFIX,ionaloutlerscrisi.fun,REJECT
 HOST-SUFFIX,ios.426g.com,REJECT
 HOST-SUFFIX,ios.bugly.qq.com,REJECT
-HOST-SUFFIX,ios.bugly.qq.com,REJECT,REJECT
 HOST-SUFFIX,iouuorpkc.com,REJECT
 HOST-SUFFIX,iouxtayinkmu.com,REJECT
 HOST-SUFFIX,ip.hivps.xyz,REJECT
@@ -3046,7 +3044,7 @@ HOST-SUFFIX,p.inte.sogou.com,REJECT
 HOST-SUFFIX,p.kjwx8.com,REJECT
 HOST-SUFFIX,p.l.qq.com,REJECT
 HOST-SUFFIX,p.lu.sogou.com,REJECT
-HOST-SUFFIX,p.qlogo.cn,REJECT,REJECT
+HOST-SUFFIX,p.qlogo.cn,REJECT
 HOST-SUFFIX,p.rfihub.com,REJECT
 HOST-SUFFIX,p.tanx.com,REJECT
 HOST-SUFFIX,p.tencentmind.com,REJECT
@@ -3076,7 +3074,7 @@ HOST-SUFFIX,partner.premiumHOSTs.com,REJECT
 HOST-SUFFIX,partnerads.ysm.yahoo.com,REJECT
 HOST-SUFFIX,pasoherb.gq,REJECT
 HOST-SUFFIX,pavfhwwddf.com,REJECT
-HOST-SUFFIX,pay.bilibili.com,REJECT,REJECT
+HOST-SUFFIX,pay.bilibili.com,REJECT
 HOST-SUFFIX,pay2clik.cf,REJECT
 HOST-SUFFIX,pbmp.ali213.net,REJECT
 HOST-SUFFIX,pbvxtgn.cn,REJECT
@@ -3534,7 +3532,7 @@ HOST-SUFFIX,s.amazon-adsystem.com,REJECT
 HOST-SUFFIX,s.appjiagu.com,REJECT
 HOST-SUFFIX,s.clkservice.youdao.com,REJECT
 HOST-SUFFIX,s.cpro.baidu.com,REJECT
-HOST-SUFFIX,s.deepl.com,REJECT,REJECT
+HOST-SUFFIX,s.deepl.com,REJECT
 HOST-SUFFIX,s.domob.cn,REJECT
 HOST-SUFFIX,s.effectivemeasure.net,REJECT
 HOST-SUFFIX,s.gdt.qq.com,REJECT
