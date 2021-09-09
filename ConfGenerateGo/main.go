@@ -1,6 +1,7 @@
 package main
 
 import (
+	"ConfGenerateGo/DownloadFile"
 	"io"
 	"net/http"
 	"net/url"
@@ -15,10 +16,15 @@ const (
 
 //url
 const (
-	CustomAdRulesListUrl = "https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/ConfigList/CustomAdRulesList.list"
+	// ios_rule_script
+	url1 = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Advertising/Advertising.list"
+	// FuGfConfig
+	url2 = "https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/ConfigList/CustomAdRulesList.list"
 )
 
 func main() {
+	DownloadFile.Out1()
+
 	proxy := func(_ *http.Request) (*url.URL, error) {
 		return url.Parse(HttpProxy)
 	}
@@ -31,7 +37,7 @@ func main() {
 		Transport: httpTransport,
 	}
 
-	req, err := http.NewRequest("GET", CustomAdRulesListUrl, nil)
+	req, err := http.NewRequest("GET", url2, nil)
 	if err != nil {
 		panic(err)
 	}
