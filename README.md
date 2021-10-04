@@ -10,6 +10,17 @@
 
 对小火箭提供能用的支持（仅仅是能用
 
+#使用方法
+优先级从高到低：
+CustomAdRules
+AdRules
+CustomRules
+AppleRules
+GFWRules
+TelegramRules
+BasicRules
+
+
 
 # 感谢
 
