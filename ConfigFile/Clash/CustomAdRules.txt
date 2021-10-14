@@ -1,7 +1,6 @@
 payload:
   # zhihu
   - DOMAIN-SUFFIX,sugar.zhihu.com
-  - DOMAIN-KEYWORD,google
   - DOMAIN,mqtt.zhihu.com
   - DOMAIN,appcloud2.in.zhihu.com
   - IP-CIDR,118.89.204.198/32
