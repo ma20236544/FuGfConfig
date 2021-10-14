@@ -1,2 +1,11 @@
 payload:
-  - DOMAIN-KEYWORD,mopub
+  - DOMAIN-KEYWORD,tokyo-hot,PROXY
+  - DOMAIN-KEYWORD,vivaldi,PROXY
+  - DOMAIN,imap.vivaldi.net,PROXY
+  - DOMAIN-KEYWORD,pornhub,PROXY
+  - DOMAIN-SUFFIX,mediator.goodsync.com,PROXY
+  - DOMAIN-KEYWORD,goodsync,PROXY
+  - DOMAIN-SUFFIX,notion.so,PROXY
+  - DOMAIN,notion.so,PROXY
+  - DOMAIN-KEYWORD,notion.so,PROXY
+  - DOMAIN-KEYWORD,github,PROXY
