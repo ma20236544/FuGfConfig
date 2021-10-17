@@ -9,5 +9,4 @@ payload:
   - DOMAIN,notion.so,PROXY
   - DOMAIN-KEYWORD,notion.so,PROXY
   - DOMAIN-KEYWORD,github,PROXY
-  - DOMAIN-KEYWORD,google,PROXY
-  - DOMAIN-KEYWORD,youtube,PROXY
+  - DOMAIN-KEYWORD,passcloud,PROXY
