@@ -15,6 +15,8 @@
 ### Quan X
 
 优先级从高到低：
+
+```
 CustomAdRules
 AdRules
 CustomRules
@@ -22,10 +24,13 @@ AppleRules
 GFWRules
 TelegramRules
 BasicRules
+```
 
 ### Loon
 
 优先级从高到低：
+
+```
 CustomAdRules
 FuckRogueSoftware
 CudtomProxy
@@ -33,8 +38,9 @@ TelegramRules
 AppleRules
 GFWRules
 CudtomDirect
-
 ```
+
+````
 https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/CustomAdRules.conf, policy=Advertising, tag=CustomAd, enabled=true
 
 https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/CudtomProxy.conf, policy=PROXY, tag=CudtomProxy, enabled=true
@@ -46,14 +52,17 @@ https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/AppleR
 https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/GFWRules.conf, policy=PROXY, tag=FuckGFW, enabled=true
 
 https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/CudtomDirect.conf, policy=DIRECT, tag=CudtomDirect, enabled=true
+
 ```
 
 ### 对于 FuckRogueSoftware 规则的说明
 
-此规则极其激进，仅保证软件最低程度功能的正常使用，使用需谨慎
+此规则极其激进，仅保证软件最低程度功能的正常使用，使用需谨慎（目前仅支持 Loon
 
 ```
+
 https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/FuckRogueSoftware.conf, policy=Advertising, tag=FuckRogueSoftware, enabled=true
+
 ```
 
 ## 感谢
@@ -67,3 +76,5 @@ https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/FuckRo
 [gfwlist](https://github.com/gfwlist/gfwlist)
 
 [SS-Rule-Snippet](https://github.com/Hackl0us/SS-Rule-Snippet#%E5%85%B3%E4%BA%8E%E9%A1%B9%E7%9B%AE)
+```
+````
