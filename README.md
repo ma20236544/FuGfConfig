@@ -31,19 +31,25 @@ BasicRules
 优先级从高到低：
 
 ```
+CustomNoAdProxy
+CustomNoAdDirect
 CustomAdRules
 FuckRogueSoftware
-CudtomProxy
+CustomProxy
 TelegramRules
 AppleRules
 GFWRules
-CudtomDirect
+CustomDirect
 ```
 
 ````
+https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/CustomNoAdProxy.conf, policy=PROXY, tag=CustomNoAdProxy, enabled=true
+
+https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/CustomNoAdDirect.conf, policy=DIRECT, tag=CustomNoAdDirect, enabled=true
+
 https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/CustomAdRules.conf, policy=Advertising, tag=CustomAd, enabled=true
 
-https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/CudtomProxy.conf, policy=PROXY, tag=CudtomProxy, enabled=true
+https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/CustomProxy.conf, policy=PROXY, tag=CustomProxy, enabled=true
 
 https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/TelegramRules.conf, policy=PROXY, tag=TelegramRules, enabled=true
 
@@ -51,7 +57,7 @@ https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/AppleR
 
 https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/GFWRules.conf, policy=PROXY, tag=FuckGFW, enabled=true
 
-https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/CudtomDirect.conf, policy=DIRECT, tag=CudtomDirect, enabled=true
+https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/CustomDirect.conf, policy=DIRECT, tag=CustomDirect, enabled=true
 
 ```
 
