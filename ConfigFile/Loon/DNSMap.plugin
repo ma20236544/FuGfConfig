@@ -33,11 +33,13 @@
 *.mi.com = server:119.29.29.29
 *.xiaomi.com = server:119.29.29.29
 *.netease.com = server:119.29.29.29
+# weibo
 *.weibo.com = server:119.29.29.29
 *.weibo.cn = server:119.29.29.29
 *.weibocdn.com = server:119.29.29.29
 *.sinaimg.com = server:119.29.29.29
 *.miaopai.com = server:119.29.29.29
+# zhihu
 *.zhihu.com = server:119.29.29.29
 *.zhimg.com = server:119.29.29.29
 *.csdn.com = server:119.29.29.29
