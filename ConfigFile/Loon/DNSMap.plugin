@@ -1,16 +1,18 @@
 [Host]
-#米忽悠
+# 全局
+*.cn = server:https://doh.pub/dns-query
+# 米忽悠
 *.bh3.com = server:https://doh.pub/dns-query
 *.mihoyo.com = server:https://doh.pub/dns-query
 *.yuanshen.com = server:https://doh.pub/dns-query
-#阿里系
-*.taobao.com = server:223.5.5.5
-*.tmall.com = server:223.5.5.5
-*.alipay.com = server:223.5.5.5
-*.alicdn.com = server:223.5.5.5
-*.aliyun.com = server:223.5.5.5
-*.aliyundrive.com = server:223.5.5.5
-#腾讯系
+# 阿里系
+*.taobao.com = server:https://dns.alidns.com/dns-query
+*.tmall.com = server:https://dns.alidns.com/dns-query
+*.alipay.com = server:https://dns.alidns.com/dns-query
+*.alicdn.com = server:https://dns.alidns.com/dns-query
+*.aliyun.com = server:https://dns.alidns.com/dns-query
+*.aliyundrive.com = server:https://dns.alidns.com/dns-query
+# 腾讯系
 *.qq.com = server:https://doh.pub/dns-query
 *.tencent.com = server:https://doh.pub/dns-query
 *.weixin.com = server:https://doh.pub/dns-query
@@ -23,7 +25,7 @@
 *.b23.tv = server:https://doh.pub/dns-query
 *.biliapi.net = server:https://doh.pub/dns-query
 *.static.geetest.com = server:https://doh.pub/dns-query
-#其他
+# 其他
 *.jd.com = server:https://doh.pub/dns-query
 *.163.com = server:https://doh.pub/dns-query
 *.126.com = server:https://doh.pub/dns-query
