@@ -1,8 +1,8 @@
 [Host]
 #米忽悠
-*.bh3.com = server:119.29.29.29
-*.mihoyo.com = server:119.29.29.29
-*.yuanshen.com = server:119.29.29.29
+*.bh3.com = server:https://doh.pub/dns-query
+*.mihoyo.com = server:https://doh.pub/dns-query
+*.yuanshen.com = server:https://doh.pub/dns-query
 #阿里系
 *.taobao.com = server:223.5.5.5
 *.tmall.com = server:223.5.5.5
@@ -12,38 +12,38 @@
 *.aliyundrive.com = server:223.5.5.5
 #腾讯系
 *.qq.com = server:https://doh.pub/dns-query
-*.tencent.com = server:119.28.28.28
+*.tencent.com = server:https://doh.pub/dns-query
 *.weixin.com = server:https://doh.pub/dns-query
 *.gtimg.cn = server:https://doh.pub/dns-query
 # bilibili
-*.bilibili.com = server:119.29.29.29
-*.bilivideo.com = server:119.29.29.29
-*.bilivideo.cn = server:119.29.29.29
-*.hdslb.com = server:119.29.29.29
-*.b23.tv = server:119.29.29.29
-*.biliapi.net = server:119.29.29.29
-*.static.geetest.com = server:119.29.29.29
+*.bilibili.com = server:https://doh.pub/dns-query
+*.bilivideo.com = server:https://doh.pub/dns-query
+*.bilivideo.cn = server:https://doh.pub/dns-query
+*.hdslb.com = server:https://doh.pub/dns-query
+*.b23.tv = server:https://doh.pub/dns-query
+*.biliapi.net = server:https://doh.pub/dns-query
+*.static.geetest.com = server:https://doh.pub/dns-query
 #其他
-*.jd.com = server:119.28.28.28
-*.163.com = server:119.29.29.29
-*.126.com = server:119.29.29.29
-*.126.net = server:119.29.29.29
-*.127.net = server:119.29.29.29
-*.netease.com = server:119.29.29.29
-*.mi.com = server:119.29.29.29
-*.xiaomi.com = server:119.29.29.29
-*.netease.com = server:119.29.29.29
+*.jd.com = server:https://doh.pub/dns-query
+*.163.com = server:https://doh.pub/dns-query
+*.126.com = server:https://doh.pub/dns-query
+*.126.net = server:https://doh.pub/dns-query
+*.127.net = server:https://doh.pub/dns-query
+*.netease.com = server:https://doh.pub/dns-query
+*.mi.com = server:https://doh.pub/dns-query
+*.xiaomi.com = server:https://doh.pub/dns-query
+*.netease.com = server:https://doh.pub/dns-query
 # weibo
-*.weibo.com = server:119.29.29.29
-*.weibo.cn = server:119.29.29.29
-*.weibocdn.com = server:119.29.29.29
-*.sinaimg.com = server:119.29.29.29
-*.miaopai.com = server:119.29.29.29
+*.weibo.com = server:https://doh.pub/dns-query
+*.weibo.cn = server:https://doh.pub/dns-query
+*.weibocdn.com = server:https://doh.pub/dns-query
+*.sinaimg.com = server:https://doh.pub/dns-query
+*.miaopai.com = server:https://doh.pub/dns-query
 # zhihu
-*.zhihu.com = server:119.29.29.29
-*.zhimg.com = server:119.29.29.29
-*.csdn.com = server:119.29.29.29
-*.ithome.com = server:119.29.29.29
-*.abchina.com = server:119.29.29.29
-*.10010.com = server:119.29.29.29
-*.10010.cn = server:119.29.29.29
+*.zhihu.com = server:https://doh.pub/dns-query
+*.zhimg.com = server:https://doh.pub/dns-query
+*.csdn.com = server:https://doh.pub/dns-query
+*.ithome.com = server:https://doh.pub/dns-query
+*.abchina.com = server:https://doh.pub/dns-query
+*.10010.com = server:https://doh.pub/dns-query
+*.10010.cn = server:https://doh.pub/dns-query
