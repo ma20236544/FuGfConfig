@@ -11,10 +11,10 @@
 *.aliyun.com = server:223.5.5.5
 *.aliyundrive.com = server:223.5.5.5
 #腾讯系
-*.qq.com = server:119.28.28.28
+*.qq.com = server:https://doh.pub/dns-query
 *.tencent.com = server:119.28.28.28
-*.weixin.com = server:119.28.28.28
-*.gtimg.cn = server:119.28.28.28
+*.weixin.com = server:https://doh.pub/dns-query
+*.gtimg.cn = server:https://doh.pub/dns-query
 # bilibili
 *.bilibili.com = server:119.29.29.29
 *.bilivideo.com = server:119.29.29.29
