@@ -1,4 +1,4 @@
-package DownloadFile
+package FileOperations
 
 import (
 	"io"
@@ -11,19 +11,9 @@ import (
 const (
 	HttpProxy  = "http://127.0.0.1:7890"
 	SocksProxy = "http://127.0.0.1:7891"
-) //url
-const (
-	// ios_rule_script
-	url1 = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Advertising/Advertising.list"
-	// FuGfConfig
-	url2 = "https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/ConfigList/CustomAdRulesList.list"
 )
 
-func Out1() {
-	print("hello")
-}
-
-func DownloadFile() {
+func DownloadFile(Url string, filePath string) {
 	proxy := func(_ *http.Request) (*url.URL, error) {
 		return url.Parse(HttpProxy)
 	}
@@ -36,7 +26,7 @@ func DownloadFile() {
 		Transport: httpTransport,
 	}
 
-	req, err := http.NewRequest("GET", url2, nil)
+	req, err := http.NewRequest("GET", Url, nil)
 	if err != nil {
 		panic(err)
 	}
@@ -46,7 +36,7 @@ func DownloadFile() {
 		panic(err)
 	}
 
-	out, err := os.Create("CustomAdRulesList.txt")
+	out, err := os.Create(filePath)
 	if err != nil {
 		panic(err)
 	}
