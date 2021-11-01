@@ -3,6 +3,7 @@ package main
 import (
 	"ConfGenerateGo/FileOperations"
 	"fmt"
+	"sort"
 	"strings"
 )
 
@@ -18,7 +19,12 @@ const (
 	url4 = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Loon/Advertising/Advertising_Domain.list"
 )
 
-var filePath = [...]string{"./DataFile/inbox.txt", "./DataFile/base.txt", "./DataFile/CustomAdRules.txt", "./DataFile/QxAdvertising.txt", "./DataFile/LoonDomainAdvertising.txt"}
+var filePath = [...]string{
+	"./DataFile/inbox.txt",
+	"./DataFile/base.txt",
+	"./DataFile/CustomAdRules.txt",
+	"./DataFile/QxAdvertising.txt",
+	"./DataFile/LoonDomainAdvertising.txt"}
 
 var policysMap = make(map[string]string)
 
@@ -43,30 +49,18 @@ func main() {
 	//MatchType MatchingKeywords PolicyName
 	policyProcessing()
 	println("处理完成")
-	// 合并文件
-	println("合并完成")
-	// 写入文件
-	println("写入完成")
 	println("结束")
 }
 
 // policy processing
 func policyProcessing() {
-	for i := 2; i <= 4; i++ {
-		// 循环读取文件
+	for i := 1; i <= 1; i++ {
+		// 循环读取文件 构建 base map
 		var ans = FileOperations.ReadFile(filePath[i])
 		// 遍历得到的数据
 		for _, v := range ans {
-			// var str = v
-			if !strings.HasPrefix(v, "#") {
-				// 规则命名统一一下
-				v = strings.Replace(v, "\n", "", -1)
-				v = strings.Replace(v, "HOST", "DOMAIN", 1)
-				v = strings.Replace(v, "host", "DOMAIN", 1)
-				v = strings.Replace(v, "domain", "DOMAIN", 1)
-				v = strings.Replace(v, "IP6-CIDR", "IP-CIDR6", 1)
-				v = strings.Replace(v, "ip6-cidr", "IP-CIDR6", 1)
-				v = strings.Replace(v, "ip-cidr6", "IP-CIDR6", 1)
+			if !strings.HasPrefix(v, "#") && !strings.Contains(v, "URL-REGEX") {
+				v = formatCorrection(v)
 
 				if strings.Count(v, "DOMAIN") > 0 && strings.Count(v, ",") >= 1 {
 					// 如果包含 DOMAIN
@@ -76,11 +70,70 @@ func policyProcessing() {
 					var data = strings.Split(v, ",")
 					policysMap[data[1]] = data[0]
 				} else {
-					v = strings.Replace(v, "\n", "", -1)
-					v = strings.TrimPrefix(v, ".")
 					policysMap[v] = "DOMAIN"
 				}
 			}
 		}
 	}
+
+	// 循环读取待处理的数据文件
+	var data []string
+	for i := 2; i <= 4; i++ {
+		var ans = FileOperations.ReadFile(filePath[i])
+		for _, v := range ans {
+			if !strings.HasPrefix(v, "#") && !strings.Contains(v, "URL-REGEX") {
+				v = formatCorrection(v)
+
+				// if v == "IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,Advertising" {
+				// 	fmt.Println(v)
+				// }
+
+				var str string
+				if strings.Contains(v, ",") {
+					var a = strings.Split(v, ",")
+					if _, ok := policysMap[a[1]]; !ok {
+						b1 := []string{a[0], a[1], "REJECT"}
+						b2 := []string{a[0], a[1], "REJECT", "no-resolve"}
+						if strings.Contains(v, "IP-CIDR") || strings.Contains(v, "IP-CIDR6") {
+							str = strings.Join(b2, ",")
+						} else {
+							str = strings.Join(b1, ",")
+						}
+						policysMap[a[1]] = a[0]
+					}
+				} else {
+					if _, ok := policysMap[v]; !ok {
+						b := []string{"DOMAIN-SUFFIX", v, "REJECT"}
+						str = strings.Join(b, ",")
+						policysMap[v] = "DOMAIN-SUFFIX"
+					}
+				}
+				if str != "" {
+					data = append(data, str)
+				}
+			}
+		}
+	}
+	// 结果排序
+	sort.Strings(data)
+
+	fmt.Println(len(data))
+	// 写入文件
+	FileOperations.WriteFile(data, "F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\CustomAdRules.conf")
+}
+
+// 规则格式统一
+func formatCorrection(s string) string {
+	s = strings.TrimPrefix(s, ".")
+	s = strings.Replace(s, "\n", "", -1)
+	s = strings.Replace(s, " ", "", -1)
+	s = strings.Replace(s, "HOST", "DOMAIN", 1)
+	s = strings.Replace(s, "host", "DOMAIN", 1)
+	s = strings.Replace(s, "domain", "DOMAIN", 1)
+	s = strings.Replace(s, "DOMAIN-suffix", "DOMAIN-SUFFIX", 1)
+	s = strings.Replace(s, "IP6-CIDR", "IP-CIDR6", 1)
+	s = strings.Replace(s, "ip6-cidr", "IP-CIDR6", 1)
+	s = strings.Replace(s, "ip-cidr6", "IP-CIDR6", 1)
+
+	return s
 }
