@@ -9,6 +9,8 @@ import (
 
 // url
 const (
+	// inbox data
+	url0 = "https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Advertising.list"
 	// ios_rule_script Loon Advertising
 	url1 = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Advertising/Advertising.list"
 	// CustomAdRules
@@ -36,6 +38,7 @@ func main() {
 	input = "n"
 	if input == "y" {
 		// 下载文件
+		FileOperations.DownloadFile(url0, filePath[0])
 		FileOperations.DownloadFile(url1, filePath[1])
 		FileOperations.DownloadFile(url2, filePath[2])
 		FileOperations.DownloadFile(url3, filePath[3])
@@ -54,8 +57,8 @@ func main() {
 
 // policy processing
 func policyProcessing() {
-	for i := 1; i <= 1; i++ {
-		// 循环读取文件 构建 base map
+	// 循环读取文件 构建 base map
+	for i := 1; i <= 2; i++ {
 		var ans = FileOperations.ReadFile(filePath[i])
 		// 遍历得到的数据
 		for _, v := range ans {
@@ -78,48 +81,57 @@ func policyProcessing() {
 
 	// 循环读取待处理的数据文件
 	var data []string
-	for i := 2; i <= 4; i++ {
+	for i := 0; i <= 0; i++ {
 		var ans = FileOperations.ReadFile(filePath[i])
 		for _, v := range ans {
 			if !strings.HasPrefix(v, "#") && !strings.Contains(v, "URL-REGEX") {
 				v = formatCorrection(v)
 
-				// if v == "IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,Advertising" {
+				// if v == "USER-AGENT,AVOS*" {
 				// 	fmt.Println(v)
 				// }
 
-				var str string
-				if strings.Contains(v, ",") {
-					var a = strings.Split(v, ",")
-					if _, ok := policysMap[a[1]]; !ok {
-						b1 := []string{a[0], a[1], "REJECT"}
-						b2 := []string{a[0], a[1], "REJECT", "no-resolve"}
-						if strings.Contains(v, "IP-CIDR") || strings.Contains(v, "IP-CIDR6") {
-							str = strings.Join(b2, ",")
-						} else {
-							str = strings.Join(b1, ",")
+				if v != "" {
+					var str string
+					if strings.Contains(v, ",") {
+						var a = strings.Split(v, ",")
+						if _, ok := policysMap[a[1]]; !ok {
+							b1 := []string{a[0], a[1], "REJECT"}
+							b2 := []string{a[0], a[1], "REJECT", "no-resolve"}
+							if strings.Contains(v, "IP-CIDR") || strings.Contains(v, "IP-CIDR6") {
+								str = strings.Join(b2, ",")
+							} else {
+								str = strings.Join(b1, ",")
+							}
+							policysMap[a[1]] = a[0]
 						}
-						policysMap[a[1]] = a[0]
+					} else {
+						if _, ok := policysMap[v]; !ok {
+							b := []string{"DOMAIN-SUFFIX", v, "REJECT"}
+							str = strings.Join(b, ",")
+							policysMap[v] = "DOMAIN-SUFFIX"
+						}
 					}
-				} else {
-					if _, ok := policysMap[v]; !ok {
-						b := []string{"DOMAIN-SUFFIX", v, "REJECT"}
-						str = strings.Join(b, ",")
-						policysMap[v] = "DOMAIN-SUFFIX"
+					if str != "" {
+						data = append(data, str)
 					}
 				}
-				if str != "" {
-					data = append(data, str)
-				}
+
 			}
 		}
 	}
+
+	// 新数据与老数据合并
+	var ans = FileOperations.ReadFile(filePath[2])
+	data = append(data, ans...)
+
 	// 结果排序
 	sort.Strings(data)
 
 	fmt.Println(len(data))
 	// 写入文件
-	FileOperations.WriteFile(data, "F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\CustomAdRules.conf")
+	// FileOperations.WriteFile(data, "F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\CustomAdRules.conf")
+	FileOperations.WriteFile(data, "./DataFile/ans.txt")
 }
 
 // 规则格式统一

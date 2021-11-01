@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strings"
 )
 
 // write file
@@ -19,7 +20,11 @@ func WriteFile(ans []string, filePath string) error {
 
 	write := bufio.NewWriter(file)
 	for _, v := range ans {
-		fmt.Fprintln(write, v)
+		if strings.Contains(v, "\n") {
+			fmt.Fprint(write, v)
+		} else {
+			fmt.Fprintln(write, v)
+		}
 	}
 
 	return write.Flush()
