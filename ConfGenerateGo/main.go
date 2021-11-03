@@ -146,6 +146,7 @@ func formatCorrection(s string) string {
 	s = strings.Replace(s, "IP6-CIDR", "IP-CIDR6", 1)
 	s = strings.Replace(s, "ip6-cidr", "IP-CIDR6", 1)
 	s = strings.Replace(s, "ip-cidr6", "IP-CIDR6", 1)
+	s = strings.Replace(s, "ip-cidr,", "IP-CIDR", 1)
 
 	return s
 }

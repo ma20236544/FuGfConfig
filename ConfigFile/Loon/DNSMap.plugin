@@ -17,12 +17,14 @@
 *.tencent.com = server:https://doh.pub/dns-query
 *.weixin.com = server:https://doh.pub/dns-query
 *.gtimg.cn = server:https://doh.pub/dns-query
+*.idqqimg.com = server:https://doh.pub/dns-query
 # bilibili
 *.bilibili.com = server:https://doh.pub/dns-query
 *.bilivideo.com = server:https://doh.pub/dns-query
 *.bilivideo.cn = server:https://doh.pub/dns-query
 *.hdslb.com = server:https://doh.pub/dns-query
 *.b23.tv = server:https://doh.pub/dns-query
+b23.tv = server:https://doh.pub/dns-query
 *.biliapi.net = server:https://doh.pub/dns-query
 *.static.geetest.com = server:https://doh.pub/dns-query
 # 其他
@@ -49,3 +51,5 @@
 *.abchina.com = server:https://doh.pub/dns-query
 *.10010.com = server:https://doh.pub/dns-query
 *.10010.cn = server:https://doh.pub/dns-query
+# sspai
+*.sspai.com = server:https://doh.pub/dns-query
