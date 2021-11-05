@@ -49,6 +49,11 @@ b23.tv = server:https://doh.pub/dns-query
 # xiaomi
 *.xiaomi.com = server:https://doh.pub/dns-query
 *.mi.com = server:https://doh.pub/dns-query
+*.miwifi.com = server:https://doh.pub/dns-query
+# douban
+*.douban.com = server:https://doh.pub/dns-query
+*.doubanio.com = server:https://doh.pub/dns-query
+*.douc.cc = server:https://doh.pub/dns-query
 # 其他
 *.jd.com = server:https://doh.pub/dns-query
 *.163.com = server:https://doh.pub/dns-query
