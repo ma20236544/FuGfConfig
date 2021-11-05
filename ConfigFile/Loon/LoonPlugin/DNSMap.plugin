@@ -27,6 +27,7 @@ b23.tv = server:https://doh.pub/dns-query
 *.static.geetest.com = server:https://doh.pub/dns-query
 # weibo
 *.weibo.com = server:https://doh.pub/dns-query
+weibo.com = server:https://doh.pub/dns-query
 *.weibo.cn = server:https://doh.pub/dns-query
 *.weibocdn.com = server:https://doh.pub/dns-query
 *.sinaimg.com = server:https://doh.pub/dns-query
