@@ -1,6 +1,4 @@
 [Host]
-# 全局
-*.cn = server:https://doh.pub/dns-query
 # 米忽悠
 *.bh3.com = server:https://doh.pub/dns-query
 *.mihoyo.com = server:https://doh.pub/dns-query
@@ -27,22 +25,14 @@
 b23.tv = server:https://doh.pub/dns-query
 *.biliapi.net = server:https://doh.pub/dns-query
 *.static.geetest.com = server:https://doh.pub/dns-query
-# 其他
-*.jd.com = server:https://doh.pub/dns-query
-*.163.com = server:https://doh.pub/dns-query
-*.126.com = server:https://doh.pub/dns-query
-*.126.net = server:https://doh.pub/dns-query
-*.127.net = server:https://doh.pub/dns-query
-*.netease.com = server:https://doh.pub/dns-query
-*.mi.com = server:https://doh.pub/dns-query
-*.xiaomi.com = server:https://doh.pub/dns-query
-*.netease.com = server:https://doh.pub/dns-query
 # weibo
 *.weibo.com = server:https://doh.pub/dns-query
 *.weibo.cn = server:https://doh.pub/dns-query
 *.weibocdn.com = server:https://doh.pub/dns-query
 *.sinaimg.com = server:https://doh.pub/dns-query
 *.miaopai.com = server:https://doh.pub/dns-query
+*.sina.com.cn = server:https://doh.pub/dns-query
+*.sinajs.cn = server:https://doh.pub/dns-query
 # zhihu
 *.zhihu.com = server:https://doh.pub/dns-query
 *.zhimg.com = server:https://doh.pub/dns-query
@@ -53,3 +43,21 @@ b23.tv = server:https://doh.pub/dns-query
 *.10010.cn = server:https://doh.pub/dns-query
 # sspai
 *.sspai.com = server:https://doh.pub/dns-query
+# 喜马拉雅
+*.xmcdn.com = server:https://doh.pub/dns-query
+*.ximalaya.com = server:https://doh.pub/dns-query
+# xiaomi
+*.xiaomi.com = server:https://doh.pub/dns-query
+*.mi.com = server:https://doh.pub/dns-query
+# 其他
+*.jd.com = server:https://doh.pub/dns-query
+*.163.com = server:https://doh.pub/dns-query
+*.126.com = server:https://doh.pub/dns-query
+*.126.net = server:https://doh.pub/dns-query
+*.127.net = server:https://doh.pub/dns-query
+*.95516.com = server:https://doh.pub/dns-query
+*.netease.com = server:https://doh.pub/dns-query
+*.netease.com = server:https://doh.pub/dns-query
+*.caiyunapp.com = server:https://doh.pub/dns-query
+# 全局
+*.cn = server:https://doh.pub/dns-query
