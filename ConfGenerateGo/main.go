@@ -9,12 +9,12 @@ import (
 
 // url
 const (
-	// inbox data
-	url0 = "https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Advertising.list"
-	// ios_rule_script Loon Advertising
-	url1 = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Advertising/Advertising.list"
+	// inbox ad data
+	inboxAdUrl = "https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/AdRulesBeta.conf"
+	// base data
+	baseAdUrl1 = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Advertising/Advertising.list"
 	// CustomAdRules
-	url2 = "https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/CustomAdRules.conf"
+	baseAdUrl2 = "https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/CustomAdRules.conf"
 	// ios_rule_script QuantumultX Advertising
 	url3 = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Advertising/Advertising.list"
 	// ios_rule_script Loon Advertising_Domain
@@ -38,9 +38,9 @@ func main() {
 	input = "n"
 	if input == "y" {
 		// 下载文件
-		FileOperations.DownloadFile(url0, filePath[0])
-		FileOperations.DownloadFile(url1, filePath[1])
-		FileOperations.DownloadFile(url2, filePath[2])
+		FileOperations.DownloadFile(inboxAdUrl, filePath[0])
+		FileOperations.DownloadFile(baseAdUrl1, filePath[1])
+		FileOperations.DownloadFile(baseAdUrl2, filePath[2])
 		FileOperations.DownloadFile(url3, filePath[3])
 		FileOperations.DownloadFile(url4, filePath[4])
 		println("更新完成")
@@ -50,13 +50,13 @@ func main() {
 	//规则分为三个部分
 	//匹配类型 ，匹配关键字，策略名称
 	//MatchType MatchingKeywords PolicyName
-	policyProcessing()
+	policyProcessing("REJECT")
 	println("处理完成")
 	println("结束")
 }
 
 // policy processing
-func policyProcessing() {
+func policyProcessing(policyName string) {
 	// 循环读取文件 构建 base map
 	for i := 1; i <= 2; i++ {
 		var ans = FileOperations.ReadFile(filePath[i])
@@ -96,8 +96,8 @@ func policyProcessing() {
 					if strings.Contains(v, ",") {
 						var a = strings.Split(v, ",")
 						if _, ok := policysMap[a[1]]; !ok {
-							b1 := []string{a[0], a[1], "REJECT"}
-							b2 := []string{a[0], a[1], "REJECT", "no-resolve"}
+							b1 := []string{a[0], a[1], policyName}
+							b2 := []string{a[0], a[1], policyName, "no-resolve"}
 							if strings.Contains(v, "IP-CIDR") || strings.Contains(v, "IP-CIDR6") {
 								str = strings.Join(b2, ",")
 							} else {
@@ -107,7 +107,7 @@ func policyProcessing() {
 						}
 					} else {
 						if _, ok := policysMap[v]; !ok {
-							b := []string{"DOMAIN-SUFFIX", v, "REJECT"}
+							b := []string{"DOMAIN-SUFFIX", v, policyName}
 							str = strings.Join(b, ",")
 							policysMap[v] = "DOMAIN-SUFFIX"
 						}
