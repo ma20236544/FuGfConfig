@@ -55,6 +55,11 @@ weibo.com = server:https://doh.pub/dns-query
 *.douban.com = server:https://doh.pub/dns-query
 *.doubanio.com = server:https://doh.pub/dns-query
 *.douc.cc = server:https://doh.pub/dns-query
+# baidu
+*.baidu.com = server:https://doh.pub/dns-query
+*.bdimg.com = server:https://doh.pub/dns-query
+*.bdstatic.com = server:https://doh.pub/dns-query
+*.bcebos.com = server:https://doh.pub/dns-query
 # 其他
 *.jd.com = server:https://doh.pub/dns-query
 *.163.com = server:https://doh.pub/dns-query
