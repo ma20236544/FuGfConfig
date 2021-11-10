@@ -16,6 +16,7 @@
 *.weixin.com = server:https://doh.pub/dns-query
 *.gtimg.cn = server:https://doh.pub/dns-query
 *.idqqimg.com = server:https://doh.pub/dns-query
+*.gcloudsdk.com = server:https://doh.pub/dns-query
 # bilibili
 *.bilibili.com = server:https://doh.pub/dns-query
 *.bilivideo.com = server:https://doh.pub/dns-query
@@ -38,10 +39,6 @@ weibo.com = server:https://doh.pub/dns-query
 *.zhihu.com = server:https://doh.pub/dns-query
 *.zhimg.com = server:https://doh.pub/dns-query
 *.csdn.com = server:https://doh.pub/dns-query
-*.ithome.com = server:https://doh.pub/dns-query
-*.abchina.com = server:https://doh.pub/dns-query
-*.10010.com = server:https://doh.pub/dns-query
-*.10010.cn = server:https://doh.pub/dns-query
 # sspai
 *.sspai.com = server:https://doh.pub/dns-query
 # 喜马拉雅
@@ -60,8 +57,15 @@ weibo.com = server:https://doh.pub/dns-query
 *.bdimg.com = server:https://doh.pub/dns-query
 *.bdstatic.com = server:https://doh.pub/dns-query
 *.bcebos.com = server:https://doh.pub/dns-query
-# 其他
+# nga
+#*.nga.178.com = server:https://doh.pub/dns-query
+*.ngacn.cc = server:https://doh.pub/dns-query
+*.178.com = server:https://doh.pub/dns-query
+# jd
 *.jd.com = server:https://doh.pub/dns-query
+*.jdcloud.com = server:https://doh.pub/dns-query
+*.jd.hk = server:https://doh.pub/dns-query
+# 其他
 *.163.com = server:https://doh.pub/dns-query
 *.126.com = server:https://doh.pub/dns-query
 *.126.net = server:https://doh.pub/dns-query
@@ -70,5 +74,9 @@ weibo.com = server:https://doh.pub/dns-query
 *.netease.com = server:https://doh.pub/dns-query
 *.netease.com = server:https://doh.pub/dns-query
 *.caiyunapp.com = server:https://doh.pub/dns-query
+*.ithome.com = server:https://doh.pub/dns-query
+*.abchina.com = server:https://doh.pub/dns-query
+*.10010.com = server:https://doh.pub/dns-query
+*.10010.cn = server:https://doh.pub/dns-query
 # 全局
 *.cn = server:https://doh.pub/dns-query

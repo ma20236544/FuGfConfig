@@ -75,6 +75,8 @@ https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/FuckRo
 
 本项目的数据大部分来自一下项目，在此对他们表示感谢（以下排名不分先后
 
+[NextDNS 维护的系统级跟踪列表](https://github.com/nextdns/metadata/tree/master/privacy/native)
+
 [Shadowrocket-ADBlock-Rules](https://github.com/h2y/Shadowrocket-ADBlock-Rules)
 
 [neohosts](https://github.com/neoFelhz/neohosts)

@@ -1,2 +1,9 @@
 [URL Rewrite]
 ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+# 来源：https://github.com/JamesHopbourn/Apple-Automation/blob/master/URL%20Rewrite.conf
+^https?://www.google.(com|cn)/search.*?q=gh\+  https://github.com/search?&q= 302
+^https?://www.google.(com|cn)/search.*?q=ghu\+ https://github.com/search?type=users&q= 302
+^https?://www.google.(com|cn)/search.*?q=bi\+ https://search.bilibili.com/all?keyword= 302
+^https?://www.google.(com|cn)/search.*?q=tw\+  https://mobile.twitter.com/search?q= 302
+^https?://www.google.(com|cn)/search.*?q=twu\+ https://mobile.twitter.com/search?f=user&q= 302
+^https?://www.google.(com|cn)/search.*?q=img\+ https://www.google.com.hk/search?tbm=isch&q= 302
