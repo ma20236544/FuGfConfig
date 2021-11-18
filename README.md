@@ -10,9 +10,13 @@
 
 对小火箭提供能用的支持（仅仅是能用
 
+优先级： Loon > Quan X > 小火箭
+
 ## 使用方法
 
 ### Quan X
+
+建议配合 ios_rule_script 项目中的 [Quan X 去广告](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/QuantumultX/Advertising) 一起使用（已去重
 
 优先级从高到低：
 
@@ -27,6 +31,8 @@ BasicRules
 ```
 
 ### Loon
+
+#### Loon 分流规则
 
 优先级从高到低：
 
@@ -63,17 +69,61 @@ https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/Custom
 
 ### 对于 FuckRogueSoftware 规则的说明
 
-此规则极其激进，仅保证软件最低程度功能的正常使用，使用需谨慎（目前仅支持 Loon
+此规则极其激进，对某些国内软件强屏蔽，包括但不限于广告，跟踪，数据分析，仅保证软件最低程度功能的正常使用，使用需谨慎
 
 ```
-
 https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/FuckRogueSoftware.conf, policy=Advertising, tag=FuckRogueSoftware, enabled=true
+```
 
+### 对于 Apple 解锁功能
+
+请查看 [iRingo 解锁完整的 Apple 功能和集成服务](https://github.com/VirgilClyne/iRingo) 仓库
+
+**建议优先采用上文仓库的规则**
+
+### 对于 Apple 分流规则
+
+请参考 [这篇文章](https://blog.royli.dev/2019/better-proxy-rules-for-apple-services)
+
+对于本项目
+AppleRules 是与本地化息息相关的规则，比如地图、天气、查找、Facetime、Apple Pay
+( iCloud 上传与下载也归于此规则集
+AppleCDNRules 是苹果的全球 CDN
+AppleNoChinaCDNRules 是大陆没有的 CDN 节点
+AppleAPIRules 是苹果的 API 域名
+
+#### 使用中国区账号（App Store + iCloud）
+
+AppleRules 直连
+AppleCDNRules 直连
+AppleNoChinaCDNRules 代理
+AppleAPIRules 直连
+
+#### 使用美国区账号（App Store + iCloud）
+
+AppleRules 直连
+AppleCDNRules 直连
+AppleNoChinaCDNRules 代理
+AppleAPIRules 代理
+
+建议 AppleAPIRules 依然直连，上文是根据上述文章给出的建议，请结合自身情况使用
+
+### Loon 插件
+
+#### DNSMap
+
+对常用的国内域名进行 DNS 解析分流 ，国内走国内的各大 Doh
+
+```
+# DNS 映射
+https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonPlugin/DNSMap.plugin, tag=DNS Map, enabled=true
 ```
 
 ## 感谢
 
 本项目的数据大部分来自一下项目，在此对他们表示感谢（以下排名不分先后
+
+[ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)
 
 [NextDNS 维护的系统级跟踪列表](https://github.com/nextdns/metadata/tree/master/privacy/native)
 
