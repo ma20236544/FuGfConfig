@@ -43,11 +43,13 @@ func WriteClashFile(ans []string, filePath string) error {
 	fmt.Fprintln(write, "payload:")
 
 	for _, v := range ans {
-		fmt.Fprint(write, "  - ")
-		if strings.Contains(v, "\n") {
-			fmt.Fprint(write, v)
-		} else {
-			fmt.Fprintln(write, v)
+		if !strings.Contains(v, "USER-AGENT") {
+			fmt.Fprint(write, "  - ")
+			if strings.Contains(v, "\n") {
+				fmt.Fprint(write, v)
+			} else {
+				fmt.Fprintln(write, v)
+			}
 		}
 	}
 

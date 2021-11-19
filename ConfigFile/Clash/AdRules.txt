@@ -103134,4 +103134,3 @@ payload:
   - IP-CIDR,45.192.59.62/32,no-resolve
   - IP-CIDR,60.211.171.128/29,no-resolve
   - IP-CIDR,60.211.211.1/32,no-resolve
-  - USER-AGENT,AVOS*
