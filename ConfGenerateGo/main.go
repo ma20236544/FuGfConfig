@@ -37,6 +37,7 @@ func main() {
 	var input string
 	// fmt.Scanln(&input)
 	input = "y"
+	// input = "n"
 	if input == "y" || input == "Y" {
 		// 下载文件
 		FileOperations.DownloadFile(inboxAdUrl, filePath[0])
@@ -132,9 +133,15 @@ func policyProcessing(policyName string) {
 
 	fmt.Println(len(data))
 	// 写入文件
-	// FileOperations.WriteFile(data, "F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\CustomAdRules.conf")
 	FileOperations.WriteFile(data, "./DataFile/ans.txt")
+	FileOperations.WriteFile(data, "F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\LoonRemoteRule\\CustomAdRules.conf")
 	FileOperations.WriteClashFile(data, "./DataFile/ans1.txt")
+	FileOperations.WriteClashFile(data, "F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Clash\\AdRules.txt")
+	//清除 bataAd 规则
+	var ans1 []string
+	ans1 = append(ans1, data[0])
+	FileOperations.WriteFile(ans1, "./DataFile/inbox.txt")
+	FileOperations.WriteFile(ans1, "F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\LoonRemoteRule\\AdRulesBeta.conf")
 }
 
 // 规则格式统一
