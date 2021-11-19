@@ -14,7 +14,7 @@ const (
 	// base data
 	baseAdUrl1 = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Advertising/Advertising.list"
 	// CustomAdRules
-	baseAdUrl2 = "https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/CustomAdRules.conf"
+	baseAdUrl2 = "https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/CustomAdRules.conf"
 	// ios_rule_script QuantumultX Advertising
 	// url3 = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Advertising/Advertising.list"
 	// ios_rule_script Loon Advertising_Domain
@@ -63,14 +63,16 @@ func policyProcessing(policyName string) {
 		var ans = FileOperations.ReadFile(filePath[i])
 		// 遍历得到的数据
 		for _, v := range ans {
-			if !strings.HasPrefix(v, "#") && !strings.Contains(v, "URL-REGEX") {
+			if !strings.HasPrefix(v, "#") &&
+				!strings.HasPrefix(v, ";") &&
+				!strings.Contains(v, "URL-REGEX") {
+				// 忽略注释与 URL-REGEX 规则
 				v = formatCorrection(v)
 
-				if strings.Count(v, "DOMAIN") > 0 && strings.Count(v, ",") >= 1 {
-					// 如果包含 DOMAIN
-					var data = strings.Split(v, ",")
-					policysMap[data[1]] = data[0]
-				} else if strings.Count(v, "IP-CIDR") > 0 || strings.Count(v, "IP-CIDR6") > 0 {
+				if (strings.Count(v, "DOMAIN") > 0 && strings.Count(v, ",") >= 1) ||
+					(strings.Count(v, "IP-CIDR") > 0 || strings.Count(v, "IP-CIDR6") > 0) ||
+					(strings.Count(v, "USER-AGENT") > 0 && strings.Count(v, ",") >= 1) {
+					// 如果包含 DOMAIN 或者 IP 或者 USER-AGENT
 					var data = strings.Split(v, ",")
 					policysMap[data[1]] = data[0]
 				} else {
@@ -85,20 +87,19 @@ func policyProcessing(policyName string) {
 	for i := 0; i <= 0; i++ {
 		var ans = FileOperations.ReadFile(filePath[i])
 		for _, v := range ans {
-			if !strings.HasPrefix(v, "#") && !strings.Contains(v, "URL-REGEX") {
+			if !strings.HasPrefix(v, "#") &&
+				!strings.HasPrefix(v, ";") &&
+				!strings.Contains(v, "URL-REGEX") {
 				v = formatCorrection(v)
-
-				// if v == "USER-AGENT,AVOS*" {
-				// 	fmt.Println(v)
-				// }
 
 				if v != "" {
 					var str string
 					if strings.Contains(v, ",") {
 						var a = strings.Split(v, ",")
 						if _, ok := policysMap[a[1]]; !ok {
-							b1 := []string{a[0], a[1], policyName}
-							b2 := []string{a[0], a[1], policyName, "no-resolve"}
+							b1 := []string{a[0], a[1]}
+							// b1 := []string{a[0], a[1], policyName}
+							b2 := []string{a[0], a[1], "no-resolve"}
 							if strings.Contains(v, "IP-CIDR") || strings.Contains(v, "IP-CIDR6") {
 								str = strings.Join(b2, ",")
 							} else {
@@ -126,13 +127,14 @@ func policyProcessing(policyName string) {
 	var ans = FileOperations.ReadFile(filePath[2])
 	data = append(data, ans...)
 
-	// 结果排序
+	// 数据结果排序
 	sort.Strings(data)
 
 	fmt.Println(len(data))
 	// 写入文件
 	// FileOperations.WriteFile(data, "F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\CustomAdRules.conf")
 	FileOperations.WriteFile(data, "./DataFile/ans.txt")
+	FileOperations.WriteClashFile(data, "./DataFile/ans1.txt")
 }
 
 // 规则格式统一
@@ -148,6 +150,9 @@ func formatCorrection(s string) string {
 	s = strings.Replace(s, "ip6-cidr", "IP-CIDR6", 1)
 	s = strings.Replace(s, "ip-cidr6", "IP-CIDR6", 1)
 	s = strings.Replace(s, "ip-cidr,", "IP-CIDR", 1)
+	s = strings.Replace(s, "USER-agent,", "USER-AGENT", 1)
+	s = strings.Replace(s, "user-agent,", "USER-AGENT", 1)
+	s = strings.Replace(s, "user-AGENT,", "USER-AGENT", 1)
 
 	return s
 }

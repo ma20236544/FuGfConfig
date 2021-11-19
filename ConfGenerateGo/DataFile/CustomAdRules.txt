@@ -52,6 +52,7 @@ DOMAIN,101billion.com,REJECT
 DOMAIN,101malls.com,REJECT
 DOMAIN,10pipsaffiliates.com,REJECT
 DOMAIN,114oldest.com,REJECT
+DOMAIN,118.89.204.198,REJECT
 DOMAIN,123.8w8w8w.com.cn,REJECT
 DOMAIN,123found.com,REJECT
 DOMAIN,123haose.com,REJECT
@@ -415,6 +416,7 @@ DOMAIN,a.unbounce.com,REJECT
 DOMAIN,a.update.51edm.net,REJECT
 DOMAIN,a.villeges.com,REJECT
 DOMAIN,a.vonage.com,REJECT
+DOMAIN,a.wkanx.com,REJECT
 DOMAIN,a1.adthink.com,REJECT
 DOMAIN,a1.aluntan.com,REJECT
 DOMAIN,a10.reflexcash.com,REJECT
@@ -580,6 +582,7 @@ DOMAIN,ad-space.net,REJECT
 DOMAIN,ad-tizer.net,REJECT
 DOMAIN,ad-u.com,REJECT
 DOMAIN,ad.21cn.com,REJECT
+DOMAIN,ad.360in.com,REJECT
 DOMAIN,ad.9tv.co.il,REJECT
 DOMAIN,ad.about.com,REJECT
 DOMAIN,ad.adstailor.com,REJECT
@@ -784,8 +787,10 @@ DOMAIN,ads.amaland.com,REJECT
 DOMAIN,ads.ami-admin.com,REJECT
 DOMAIN,ads.appota.com,REJECT
 DOMAIN,ads.asexstories.com,REJECT
+DOMAIN,ads.auctions.yahoo.com,REJECT
 DOMAIN,ads.autotrader.com,REJECT
 DOMAIN,ads.avads.net,REJECT
+DOMAIN,ads.aws.viber.com,REJECT
 DOMAIN,ads.be2hand.com,REJECT
 DOMAIN,ads.beenetworks.net,REJECT
 DOMAIN,ads.benefitspro.com,REJECT
@@ -848,6 +853,7 @@ DOMAIN,ads.evidon.com,REJECT
 DOMAIN,ads.evtv1.com,REJECT
 DOMAIN,ads.exactseek.com,REJECT
 DOMAIN,ads.fiat-bg.org,REJECT
+DOMAIN,ads.finance.yahoo.com,REJECT
 DOMAIN,ads.focus-news.net,REJECT
 DOMAIN,ads.footballmedia.com,REJECT
 DOMAIN,ads.fooyoh.com,REJECT
@@ -1049,10 +1055,12 @@ DOMAIN,adserving.autotrader.com,REJECT
 DOMAIN,adserving.favorit-network.com,REJECT
 DOMAIN,adserving.fyi-marketing.com,REJECT
 DOMAIN,adserving.muppetism.com,REJECT
+DOMAIN,adsfile.bssdlbig.kugou.com,REJECT
 DOMAIN,adsflame.com,REJECT
 DOMAIN,adsgen.bangbros.com,REJECT
 DOMAIN,adsmanager.net,REJECT
 DOMAIN,adsmarket.es,REJECT
+DOMAIN,adsmind.gdtimg.com,REJECT
 DOMAIN,adsnew.gsmarena.com,REJECT
 DOMAIN,adsolutions.yp.com,REJECT
 DOMAIN,adsplex.com,REJECT
@@ -1708,6 +1716,7 @@ DOMAIN,apparelopolis.net,REJECT
 DOMAIN,appboy-images.com,REJECT
 DOMAIN,appcaptcha.com,REJECT
 DOMAIN,appcdn.tvpage.com,REJECT
+DOMAIN,appcloud2.in.zhihu.com,REJECT
 DOMAIN,appflood.com,REJECT
 DOMAIN,appgasstation.com,REJECT
 DOMAIN,apphackz.com,REJECT
@@ -2792,6 +2801,7 @@ DOMAIN,c.ynjk120.com,REJECT
 DOMAIN,c00.adobe.com,REJECT
 DOMAIN,c1.cdnjav.com,REJECT
 DOMAIN,c1479369057.mtraction.com,REJECT
+DOMAIN,c1wx.lianwangtech.com,REJECT
 DOMAIN,c2.clickprotects.com,REJECT
 DOMAIN,c2i-cdn.startappnetwork.com,REJECT
 DOMAIN,c4.mysearch.com,REJECT
@@ -3875,6 +3885,7 @@ DOMAIN,cutheatergroup.cn,REJECT
 DOMAIN,cutw.pro,REJECT
 DOMAIN,cvent.axiatraders.com,REJECT
 DOMAIN,cwhrealestate.com,REJECT
+DOMAIN,cwx.lianwangtech.com,REJECT
 DOMAIN,cyanskycopiers.com,REJECT
 DOMAIN,cyber-shop.net,REJECT
 DOMAIN,cyberlink.pro,REJECT
@@ -4247,6 +4258,7 @@ DOMAIN,discvr.net,REJECT
 DOMAIN,disney.inq.com,REJECT
 DOMAIN,disney.touchcommerce.com,REJECT
 DOMAIN,dispatcher-bsy.c360dn.com,REJECT
+DOMAIN,dispatcher.360in.com,REJECT
 DOMAIN,dispatcher.c360dn.com,REJECT
 DOMAIN,displayadsmedia.com,REJECT
 DOMAIN,displaypagerank.com,REJECT
@@ -4791,6 +4803,7 @@ DOMAIN,emergencyactionplan.org,REJECT
 DOMAIN,emerginguniverse.com,REJECT
 DOMAIN,emirateshf.com,REJECT
 DOMAIN,emiratesnbbd.com,REJECT
+DOMAIN,emma-414870e223.huodonghezi.com,REJECT
 DOMAIN,emmenegger.owncube.com,REJECT
 DOMAIN,emobi-sys.com,REJECT
 DOMAIN,emoneyspace.com,REJECT
@@ -5026,6 +5039,7 @@ DOMAIN,exitopolska.com,REJECT
 DOMAIN,exits.adultcash.com,REJECT
 DOMAIN,exitsplash.s3.amazonaws.com,REJECT
 DOMAIN,exotional-rephings.com,REJECT
+DOMAIN,exp.360in.com,REJECT
 DOMAIN,expatlines.com,REJECT
 DOMAIN,expedia.com.hk,REJECT
 DOMAIN,expediauk.inq.com,REJECT
@@ -9143,6 +9157,7 @@ DOMAIN,mpcs.inq.com,REJECT
 DOMAIN,mphtadhci5mrdlju.tor2web.org,REJECT
 DOMAIN,mpmmdphd.000webDOMAINapp.com,REJECT
 DOMAIN,mq.news-subscribe.com,REJECT
+DOMAIN,mqtt.zhihu.com,REJECT
 DOMAIN,mr.media-bucket.com,REJECT
 DOMAIN,mrcrackworld.com,REJECT
 DOMAIN,mrkfus.000webDOMAINapp.com,REJECT
@@ -12591,6 +12606,7 @@ DOMAIN,sudcom.org,REJECT
 DOMAIN,sufiles.com,REJECT
 DOMAIN,sufyanrecruitingagency.com,REJECT
 DOMAIN,sufzmohljbgw.com,REJECT
+DOMAIN,sugar.zhihu.com,REJECT
 DOMAIN,suissepharma.com,REJECT
 DOMAIN,sukalah.000webDOMAINapp.com,REJECT
 DOMAIN,sularz.000webDOMAINapp.com,REJECT
@@ -12749,6 +12765,7 @@ DOMAIN,t2.junbi-tracker.com,REJECT
 DOMAIN,t2.symcb.com,REJECT
 DOMAIN,t4.kugou.com,REJECT
 DOMAIN,t5.news-subscribe.com,REJECT
+DOMAIN,t7z.cupid.iqiyi.com,REJECT
 DOMAIN,tabatti.com,REJECT
 DOMAIN,tabex.sopharma.bg,REJECT
 DOMAIN,tabfirmware.com,REJECT
@@ -14638,6 +14655,8 @@ DOMAIN,wwwwal-mart.com,REJECT
 DOMAIN,wwwzapas.cn,REJECT
 DOMAIN,wwznjjvkfqnyvy.com,REJECT
 DOMAIN,wxbrdppfpr.com,REJECT
+DOMAIN,wxsnsdy.wxs.qq.com,REJECT
+DOMAIN,wxsnsdythumb.wxs.qq.com,REJECT
 DOMAIN,wxsssfvmqi.com,REJECT
 DOMAIN,wxyrxthxswyxrcx.com,REJECT
 DOMAIN,wygrania.com,REJECT
@@ -23490,6 +23509,7 @@ DOMAIN-SUFFIX,adsparc.com,REJECT
 DOMAIN-SUFFIX,adsparc.net,REJECT
 DOMAIN-SUFFIX,adspartners.coupang.com,REJECT
 DOMAIN-SUFFIX,adspdbl.com,REJECT
+DOMAIN-SUFFIX,adspecs.yahoo.com,REJECT
 DOMAIN-SUFFIX,adspectacle.net,REJECT
 DOMAIN-SUFFIX,adspeed.com,REJECT
 DOMAIN-SUFFIX,adspeed.net,REJECT
@@ -23997,6 +24017,7 @@ DOMAIN-SUFFIX,advertising.illinimedia.com,REJECT
 DOMAIN-SUFFIX,advertising.lycos.com,REJECT
 DOMAIN-SUFFIX,advertising.microsoft.com,REJECT
 DOMAIN-SUFFIX,advertising.paltalk.com,REJECT
+DOMAIN-SUFFIX,advertising.yahoo.com,REJECT
 DOMAIN-SUFFIX,advertising365.com,REJECT
 DOMAIN-SUFFIX,advertisingagent.com,REJECT
 DOMAIN-SUFFIX,advertisingbanners.com,REJECT
@@ -51032,6 +51053,7 @@ DOMAIN-SUFFIX,hoguchiphe.com,REJECT
 DOMAIN-SUFFIX,hogyp.com,REJECT
 DOMAIN-SUFFIX,hohosearch.com,REJECT
 DOMAIN-SUFFIX,hoisin.coocaa.com,REJECT
+DOMAIN-SUFFIX,hoisin.coocaatv.com,REJECT
 DOMAIN-SUFFIX,hoistchart.com,REJECT
 DOMAIN-SUFFIX,holder.com.ua,REJECT
 DOMAIN-SUFFIX,holdierpriv.club,REJECT
@@ -52020,7 +52042,16 @@ DOMAIN-SUFFIX,iaalxo.vans.ru,REJECT
 DOMAIN-SUFFIX,iabusprivacy.pmc.com,REJECT
 DOMAIN-SUFFIX,iaclick.ifeng.com,REJECT
 DOMAIN-SUFFIX,iacpromotion.s3.amazonaws.com,REJECT
+DOMAIN-SUFFIX,iad-01.braze.com,REJECT
+DOMAIN-SUFFIX,iad-02.braze.com,REJECT
+DOMAIN-SUFFIX,iad-03.appboy.com,REJECT
+DOMAIN-SUFFIX,iad-03.braze.com,REJECT
+DOMAIN-SUFFIX,iad-04.braze.com,REJECT
+DOMAIN-SUFFIX,iad-05.braze.com,REJECT
+DOMAIN-SUFFIX,iad-06.braze.com,REJECT
+DOMAIN-SUFFIX,iad-08.braze.com,REJECT
 DOMAIN-SUFFIX,iad.anm.co.uk,REJECT
+DOMAIN-SUFFIX,iad.appboy.com,REJECT
 DOMAIN-SUFFIX,iad.apple.com,REJECT
 DOMAIN-SUFFIX,iad.e.360.cn,REJECT
 DOMAIN-SUFFIX,iad.g.163.com,REJECT
@@ -103046,6 +103077,8 @@ DOMAIN-SUFFIX,zzzrtrcm2.com,REJECT
 DOMAIN-SUFFIX,zzzzz4.52896368.com,REJECT
 IP-CIDR,101.227.14.80/29,REJECT,no-resolve
 IP-CIDR,101.227.200.0/22,REJECT,no-resolve
+IP-CIDR,101.227.200.11/32,REJECT,no-resolve
+IP-CIDR,101.227.200.28/32,REJECT,no-resolve
 IP-CIDR,103.75.47.19/32,REJECT,no-resolve
 IP-CIDR,104.201.20.196/32,REJECT,no-resolve
 IP-CIDR,104.233.154.134/32,REJECT,no-resolve
@@ -103054,6 +103087,7 @@ IP-CIDR,112.253.36.0/24,REJECT,no-resolve
 IP-CIDR,117.139.16.0/22,REJECT,no-resolve
 IP-CIDR,117.139.18.141/22,REJECT,no-resolve
 IP-CIDR,118.144.88.216/32,REJECT,no-resolve
+IP-CIDR,118.89.204.198/32,REJECT,no-resolve
 IP-CIDR,119.188.13.32/29,REJECT,no-resolve
 IP-CIDR,119.188.172.192/28,REJECT,no-resolve
 IP-CIDR,119.188.173.0/27,REJECT,no-resolve
@@ -103078,3 +103112,4 @@ IP-CIDR,27.221.89.128/28,REJECT,no-resolve
 IP-CIDR,45.192.59.62/32,REJECT,no-resolve
 IP-CIDR,60.211.171.128/29,REJECT,no-resolve
 IP-CIDR,60.211.211.1/32,REJECT,no-resolve
+USER-AGENT,AVOS*,REJECT

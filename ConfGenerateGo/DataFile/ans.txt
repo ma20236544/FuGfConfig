@@ -16692,6 +16692,7 @@ DOMAIN-SUFFIX,43137c93a82b0e81da.com,REJECT
 DOMAIN-SUFFIX,4336wang.cn,REJECT
 DOMAIN-SUFFIX,43711cffd26816e.com,REJECT
 DOMAIN-SUFFIX,43d6f284d10bfbbb3.com,REJECT
+DOMAIN-SUFFIX,43dh.com
 DOMAIN-SUFFIX,43gw.cn,REJECT
 DOMAIN-SUFFIX,44-trk-srv.com,REJECT
 DOMAIN-SUFFIX,44.adsina.allyes.com,REJECT
@@ -21832,6 +21833,7 @@ DOMAIN-SUFFIX,ads.73dpi.com,REJECT
 DOMAIN-SUFFIX,ads.7days.ae,REJECT
 DOMAIN-SUFFIX,ads.8833.com,REJECT
 DOMAIN-SUFFIX,ads.8live.com,REJECT
+DOMAIN-SUFFIX,ads.95516.com
 DOMAIN-SUFFIX,ads.979799777.com,REJECT
 DOMAIN-SUFFIX,ads.DOMAINing.vcmedia.vn,REJECT
 DOMAIN-SUFFIX,ads.aavv.com,REJECT
@@ -25691,6 +25693,7 @@ DOMAIN-SUFFIX,analytics.163.com,REJECT
 DOMAIN-SUFFIX,analytics.21cn.com,REJECT
 DOMAIN-SUFFIX,analytics.247sports.com,REJECT
 DOMAIN-SUFFIX,analytics.30m.com,REJECT
+DOMAIN-SUFFIX,analytics.95516.com
 DOMAIN-SUFFIX,analytics.aasaam.com,REJECT
 DOMAIN-SUFFIX,analytics.aba.com,REJECT
 DOMAIN-SUFFIX,analytics.abacast.com,REJECT
@@ -28032,6 +28035,7 @@ DOMAIN-SUFFIX,ax.ggfeng.com,REJECT
 DOMAIN-SUFFIX,ax.idg.se,REJECT
 DOMAIN-SUFFIX,ax.ifeng.com,REJECT
 DOMAIN-SUFFIX,ax.xrea.com,REJECT
+DOMAIN-SUFFIX,ax1x.com
 DOMAIN-SUFFIX,ax21pics.org,REJECT
 DOMAIN-SUFFIX,axacqy.henderson.ru,REJECT
 DOMAIN-SUFFIX,axazusys.xyz,REJECT
@@ -29273,6 +29277,7 @@ DOMAIN-SUFFIX,bdcode.gaosan.com,REJECT
 DOMAIN-SUFFIX,bdcode.qinglm.com,REJECT
 DOMAIN-SUFFIX,bdcode.youke.com,REJECT
 DOMAIN-SUFFIX,bdcode1.haodou.com,REJECT
+DOMAIN-SUFFIX,bdcore-apr-lb.bda.ndmdhs.com
 DOMAIN-SUFFIX,bdcouc.xyz,REJECT
 DOMAIN-SUFFIX,bdd.hainan.net,REJECT
 DOMAIN-SUFFIX,bddm.999d.com,REJECT
@@ -30828,6 +30833,8 @@ DOMAIN-SUFFIX,bookofsex.com,REJECT
 DOMAIN-SUFFIX,bookopen.cn,REJECT
 DOMAIN-SUFFIX,bookpdf.services,REJECT
 DOMAIN-SUFFIX,bookproplus.com,REJECT
+DOMAIN-SUFFIX,books-analytics-events.apple.com
+DOMAIN-SUFFIX,books-analytics-events.news.apple-dns.net
 DOMAIN-SUFFIX,booksmediaedupremiumblvd.com,REJECT
 DOMAIN-SUFFIX,booksmediaedurewardempire.com,REJECT
 DOMAIN-SUFFIX,booksmediarewardpath.com,REJECT
@@ -35067,6 +35074,7 @@ DOMAIN-SUFFIX,cmsskin.com,REJECT
 DOMAIN-SUFFIX,cmstool.youku.com,REJECT
 DOMAIN-SUFFIX,cmstrendslog.indiatimes.com,REJECT
 DOMAIN-SUFFIX,cmstrendslog.timesnow.tv,REJECT
+DOMAIN-SUFFIX,cmt.ithome.com
 DOMAIN-SUFFIX,cmt.setrowid.com,REJECT
 DOMAIN-SUFFIX,cmta.yangkeduo.com,REJECT
 DOMAIN-SUFFIX,cmtmzvrku9uae.DOMAIN,REJECT
@@ -41417,6 +41425,7 @@ DOMAIN-SUFFIX,dzais.com,REJECT
 DOMAIN-SUFFIX,dzbk.dhxctzx.com,REJECT
 DOMAIN-SUFFIX,dzbrr144kh0m6.cloudfront.net,REJECT
 DOMAIN-SUFFIX,dzbx8qv1at614.cloudfront.net,REJECT
+DOMAIN-SUFFIX,dzc-metrics.mzstatic.com
 DOMAIN-SUFFIX,dzd9.cn,REJECT
 DOMAIN-SUFFIX,dzdkw9.cn,REJECT
 DOMAIN-SUFFIX,dzgg.com,REJECT
@@ -45099,6 +45108,7 @@ DOMAIN-SUFFIX,feedaty.com,REJECT
 DOMAIN-SUFFIX,feedback.cn.ronghub.com,REJECT
 DOMAIN-SUFFIX,feedback.microsofthohm.com,REJECT
 DOMAIN-SUFFIX,feedback.qy.net,REJECT
+DOMAIN-SUFFIX,feedback.search.microsoft.com
 DOMAIN-SUFFIX,feedback.vegasgoldenknights.com,REJECT
 DOMAIN-SUFFIX,feedback.whalecloud.com,REJECT
 DOMAIN-SUFFIX,feedbackcensus.com,REJECT
@@ -63365,6 +63375,7 @@ DOMAIN-SUFFIX,metrics.dailytelegraph.com.au,REJECT
 DOMAIN-SUFFIX,metrics.dairyreporter.com,REJECT
 DOMAIN-SUFFIX,metrics.dallasnews.com,REJECT
 DOMAIN-SUFFIX,metrics.damart.fr,REJECT
+DOMAIN-SUFFIX,metrics.data.hicloud.com
 DOMAIN-SUFFIX,metrics.datafeedtoolbox.com,REJECT
 DOMAIN-SUFFIX,metrics.dcshoes.com,REJECT
 DOMAIN-SUFFIX,metrics.defenseone.com,REJECT
@@ -64102,11 +64113,16 @@ DOMAIN-SUFFIX,metrics0.com,REJECT
 DOMAIN-SUFFIX,metrics1.citi.com,REJECT
 DOMAIN-SUFFIX,metrics1.citibank.com,REJECT
 DOMAIN-SUFFIX,metrics1.citibankonline.com,REJECT
+DOMAIN-SUFFIX,metrics1.data.hicloud.com
 DOMAIN-SUFFIX,metrics1.experian.com,REJECT
 DOMAIN-SUFFIX,metrics1.thankyou.com,REJECT
+DOMAIN-SUFFIX,metrics2.data.hicloud.com
 DOMAIN-SUFFIX,metrics2.houselogic.com,REJECT
 DOMAIN-SUFFIX,metrics2.pricegrabber.com,REJECT
+DOMAIN-SUFFIX,metrics3.data.hicloud.com
 DOMAIN-SUFFIX,metrics34.com,REJECT
+DOMAIN-SUFFIX,metrics4.data.hicloud.com
+DOMAIN-SUFFIX,metrics5.data.hicloud.com
 DOMAIN-SUFFIX,metricsapi.librato.com,REJECT
 DOMAIN-SUFFIX,metricsbroker.prod.p.tf1.fr,REJECT
 DOMAIN-SUFFIX,metricscbslocalcom.cdn.ampproject.org,REJECT
@@ -73771,6 +73787,7 @@ DOMAIN-SUFFIX,processor.asccommunications.com,REJECT
 DOMAIN-SUFFIX,proclaimsubjected.com,REJECT
 DOMAIN-SUFFIX,proclivitysystems.com,REJECT
 DOMAIN-SUFFIX,prod.html5ads.vkapps.com,REJECT
+DOMAIN-SUFFIX,prod.nexusrules.live.com.akadns.net
 DOMAIN-SUFFIX,prod.untd.com,REJECT
 DOMAIN-SUFFIX,prodcollector.bigbasket.com,REJECT
 DOMAIN-SUFFIX,prode.sprtad.com,REJECT
@@ -86550,6 +86567,8 @@ DOMAIN-SUFFIX,stoassod.com,REJECT
 DOMAIN-SUFFIX,stockbookads.firebaseapp.com,REJECT
 DOMAIN-SUFFIX,stockbookads.firebaseio.com,REJECT
 DOMAIN-SUFFIX,stocker.bonnint.net,REJECT
+DOMAIN-SUFFIX,stocks-analytics-events.apple.com
+DOMAIN-SUFFIX,stocks-analytics-events.news.apple-dns.net
 DOMAIN-SUFFIX,stocksbsc.com,REJECT
 DOMAIN-SUFFIX,stoffickiesolding.site,REJECT
 DOMAIN-SUFFIX,stoiximan.gr,REJECT
@@ -92806,6 +92825,7 @@ DOMAIN-SUFFIX,tyrantdb.com,REJECT
 DOMAIN-SUFFIX,tyrghj.cn,REJECT
 DOMAIN-SUFFIX,tyroo.com,REJECT
 DOMAIN-SUFFIX,tyrvictions.xyz,REJECT
+DOMAIN-SUFFIX,tysdk.95516.com
 DOMAIN-SUFFIX,tyshochime.com,REJECT
 DOMAIN-SUFFIX,tysicyse.com,REJECT
 DOMAIN-SUFFIX,tytheglupy.com,REJECT
@@ -95543,6 +95563,7 @@ DOMAIN-SUFFIX,vortex-win-sandbox.data.microsoft.com,REJECT
 DOMAIN-SUFFIX,vortex-win.data.microsoft.com,REJECT
 DOMAIN-SUFFIX,vortex.data.glbdns2.microsoft.com,REJECT
 DOMAIN-SUFFIX,vortex.data.microsoft.com,REJECT
+DOMAIN-SUFFIX,vortex.data.microsoft.com.akadns.net
 DOMAIN-SUFFIX,vortex.data.msn.com,REJECT
 DOMAIN-SUFFIX,vortex.hulu.com,REJECT
 DOMAIN-SUFFIX,vospendence.club,REJECT
