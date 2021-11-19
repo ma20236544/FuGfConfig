@@ -16,17 +16,18 @@ const (
 	// CustomAdRules
 	baseAdUrl2 = "https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/CustomAdRules.conf"
 	// ios_rule_script QuantumultX Advertising
-	url3 = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Advertising/Advertising.list"
+	// url3 = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Advertising/Advertising.list"
 	// ios_rule_script Loon Advertising_Domain
-	url4 = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Loon/Advertising/Advertising_Domain.list"
+	// url4 = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Loon/Advertising/Advertising_Domain.list"
 )
 
 var filePath = [...]string{
 	"./DataFile/inbox.txt",
 	"./DataFile/base.txt",
-	"./DataFile/CustomAdRules.txt",
-	"./DataFile/QxAdvertising.txt",
-	"./DataFile/LoonDomainAdvertising.txt"}
+	"./DataFile/CustomAdRules.txt"}
+
+// "./DataFile/QxAdvertising.txt",
+// "./DataFile/LoonDomainAdvertising.txt"}
 
 var policysMap = make(map[string]string)
 
@@ -35,14 +36,14 @@ func main() {
 	fmt.Println("是否要更新or下载远程数据(y or n)")
 	var input string
 	// fmt.Scanln(&input)
-	input = "n"
-	if input == "y" {
+	input = "y"
+	if input == "y" || input == "Y" {
 		// 下载文件
 		FileOperations.DownloadFile(inboxAdUrl, filePath[0])
 		FileOperations.DownloadFile(baseAdUrl1, filePath[1])
 		FileOperations.DownloadFile(baseAdUrl2, filePath[2])
-		FileOperations.DownloadFile(url3, filePath[3])
-		FileOperations.DownloadFile(url4, filePath[4])
+		// FileOperations.DownloadFile(url3, filePath[3])
+		// FileOperations.DownloadFile(url4, filePath[4])
 		println("更新完成")
 	}
 

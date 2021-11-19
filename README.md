@@ -44,8 +44,12 @@ FuckRogueSoftware
 CustomProxy
 TelegramRules
 AppleRules
+AppleAPIRules
+AppleCDNRules
+AppleNoChinaCDNRules
 GFWRules
 CustomDirect
+BaseRules
 ```
 
 ```
@@ -59,11 +63,19 @@ https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/Custom
 
 https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/TelegramRules.conf, policy=PROXY, tag=TelegramRules, enabled=true
 
-https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/AppleRules.conf, policy=Apple, tag=Apple, enabled=true
+https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/AppleRules.conf, policy=Apple, tag=Apple, enabled=true
+
+https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/AppleAPIRules.conf, policy=AppleAPI, tag=AppleAPI, enabled=true
+
+https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/AppleCDNRules.conf, policy=AppleCDN, tag=AppleCDN, enabled=true
+
+https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/AppleNoChinaCDNRules.conf, policy=AppleNoChinaCDN, tag=AppleNoChinaCDN, enabled=true
 
 https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/GFWRules.conf, policy=PROXY, tag=FuckGFW, enabled=true
 
 https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/CustomDirect.conf, policy=DIRECT, tag=CustomDirect, enabled=true
+
+https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/BaseRules.conf, policy=DIRECT, tag=BaseRules, enabled=true
 
 ```
 
