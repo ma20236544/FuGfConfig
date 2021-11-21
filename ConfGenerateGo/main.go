@@ -16,18 +16,20 @@ const (
 	// CustomAdRules
 	baseAdUrl2 = "https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/Advertising/AdRules.conf"
 	// ios_rule_script QuantumultX Advertising
-	// url3 = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Advertising/Advertising.list"
+	inbox1AdUrl = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Advertising/Advertising.list"
 	// ios_rule_script Loon Advertising_Domain
 	// url4 = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Loon/Advertising/Advertising_Domain.list"
 )
 
 // var filePath = [...]string{
 // 	"./DataFile/inbox.txt",
+// 	"./DataFile/inbox1.txt",
 // 	"./DataFile/base.txt",
 // 	"./DataFile/CustomAdRules.txt"}
 
 var filePath = [...]string{
 	"F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\LoonRemoteRule\\Advertising\\AdRulesBeta.conf",
+	"./DataFile/inbox1.txt",
 	"./DataFile/base.txt",
 	"F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\LoonRemoteRule\\Advertising\\AdRules.conf"}
 
@@ -46,9 +48,9 @@ func main() {
 	if input == "y" || input == "Y" {
 		// 下载文件
 		FileOperations.DownloadFile(inboxAdUrl, filePath[0])
-		FileOperations.DownloadFile(baseAdUrl1, filePath[1])
-		FileOperations.DownloadFile(baseAdUrl2, filePath[2])
-		// FileOperations.DownloadFile(url3, filePath[3])
+		FileOperations.DownloadFile(baseAdUrl1, filePath[2])
+		FileOperations.DownloadFile(baseAdUrl2, filePath[3])
+		FileOperations.DownloadFile(inbox1AdUrl, filePath[1])
 		// FileOperations.DownloadFile(url4, filePath[4])
 		println("更新完成")
 	}
@@ -65,7 +67,7 @@ func main() {
 // policy processing
 func policyProcessing(policyName string) {
 	// 循环读取文件 构建 base map
-	for i := 1; i <= 2; i++ {
+	for i := 2; i <= 3; i++ {
 		var ans = FileOperations.ReadFile(filePath[i])
 		fmt.Println("base map", i, "共", len(ans), "条数据")
 		// 遍历得到的数据
@@ -94,9 +96,9 @@ func policyProcessing(policyName string) {
 
 	// 循环读取待处理的数据文件
 	var data []string
-	for i := 0; i <= 0; i++ {
+	for i := 0; i <= 1; i++ {
 		var ans = FileOperations.ReadFile(filePath[i])
-		fmt.Println("读取待处理数据，共", len(ans), "条数据")
+		fmt.Println("读取待处理数据", i, "，共", len(ans), "条数据")
 		for _, v := range ans {
 			if !strings.HasPrefix(v, "#") &&
 				!strings.HasPrefix(v, ";") &&
@@ -135,6 +137,8 @@ func policyProcessing(policyName string) {
 		}
 	}
 
+	fmt.Println("处理后共有", len(data), "条 new 数据")
+
 	// 新数据与老数据合并
 	var ans = FileOperations.ReadFile(filePath[2])
 	data = append(data, ans...)
@@ -142,7 +146,7 @@ func policyProcessing(policyName string) {
 	// 数据结果排序
 	sort.Strings(data)
 
-	fmt.Println(len(data))
+	fmt.Println("更新后去广告规则共有", len(data))
 	// 写入文件
 	FileOperations.WriteFile(data, "./DataFile/ans.txt")
 	FileOperations.WriteFile(data, "F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\LoonRemoteRule\\Advertising\\AdRules.conf")
