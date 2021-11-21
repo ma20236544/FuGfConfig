@@ -21,10 +21,15 @@ const (
 	// url4 = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Loon/Advertising/Advertising_Domain.list"
 )
 
+// var filePath = [...]string{
+// 	"./DataFile/inbox.txt",
+// 	"./DataFile/base.txt",
+// 	"./DataFile/CustomAdRules.txt"}
+
 var filePath = [...]string{
-	"./DataFile/inbox.txt",
+	"F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\LoonRemoteRule\\Advertising\\AdRulesBeta.conf",
 	"./DataFile/base.txt",
-	"./DataFile/CustomAdRules.txt"}
+	"F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\LoonRemoteRule\\Advertising\\AdRules.conf"}
 
 // "./DataFile/QxAdvertising.txt",
 // "./DataFile/LoonDomainAdvertising.txt"}
@@ -36,8 +41,8 @@ func main() {
 	fmt.Println("是否要更新or下载远程数据(y or n)")
 	var input string
 	// fmt.Scanln(&input)
-	input = "y"
-	// input = "n"
+	// input = "y"
+	input = "n"
 	if input == "y" || input == "Y" {
 		// 下载文件
 		FileOperations.DownloadFile(inboxAdUrl, filePath[0])
@@ -62,12 +67,14 @@ func policyProcessing(policyName string) {
 	// 循环读取文件 构建 base map
 	for i := 1; i <= 2; i++ {
 		var ans = FileOperations.ReadFile(filePath[i])
+		fmt.Println("base map", i, "共", len(ans), "条数据")
 		// 遍历得到的数据
 		for _, v := range ans {
 			if !strings.HasPrefix(v, "#") &&
 				!strings.HasPrefix(v, ";") &&
+				!strings.HasPrefix(v, "\n") &&
 				!strings.Contains(v, "URL-REGEX") {
-				// 忽略注释与 URL-REGEX 规则
+				// 忽略注释与 URL-REGEX 规则和空行
 				v = formatCorrection(v)
 
 				if (strings.Count(v, "DOMAIN") > 0 && strings.Count(v, ",") >= 1) ||
@@ -83,13 +90,17 @@ func policyProcessing(policyName string) {
 		}
 	}
 
+	fmt.Println("基础数据库构建完成，共", len(policysMap), "条数据")
+
 	// 循环读取待处理的数据文件
 	var data []string
 	for i := 0; i <= 0; i++ {
 		var ans = FileOperations.ReadFile(filePath[i])
+		fmt.Println("读取待处理数据，共", len(ans), "条数据")
 		for _, v := range ans {
 			if !strings.HasPrefix(v, "#") &&
 				!strings.HasPrefix(v, ";") &&
+				!strings.HasPrefix(v, "\n") &&
 				!strings.Contains(v, "URL-REGEX") {
 				v = formatCorrection(v)
 
