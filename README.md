@@ -37,43 +37,48 @@ BasicRules
 优先级从高到低：
 
 ```
-CustomNoAdProxy
-CustomNoAdDirect
-CustomAdRules
+NoAdProxy
+NoAdDirect
+AdRules
 FuckRogueSoftware
-CustomProxy
+ProxyRules
 TelegramRules
+AppleNoChinaCDNRules
 AppleRules
 AppleAPIRules
 AppleCDNRules
-AppleNoChinaCDNRules
 GFWRules
-CustomDirect
+DirectRules
 BaseRules
 ```
 
 ```
-https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/CustomNoAdProxy.conf, policy=PROXY, tag=CustomNoAdProxy, enabled=true
+# 对疑似误杀的广告分流规则的修正
+https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/Advertising/NoAdProxyRules.conf, policy=PROXY, tag=NoAdProxy, enabled=true
 
-https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/CustomNoAdDirect.conf, policy=DIRECT, tag=CustomNoAdDirect, enabled=true
+https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/Advertising/NoAdDirectRules.conf, policy=DIRECT, tag=NoAdDirect, enabled=true
 
-https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/CustomAdRules.conf, policy=Advertising, tag=CustomAd, enabled=true
+# 去广告
+https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/Advertising/AdRules.conf, policy=Advertising, tag=CustomAd, enabled=true
 
-https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/CustomProxy.conf, policy=PROXY, tag=CustomProxy, enabled=true
+# 自定义的代理
+https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/ProxyRules.conf, policy=PROXY, tag=CustomProxy, enabled=true
 
 https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/TelegramRules.conf, policy=PROXY, tag=TelegramRules, enabled=true
 
-https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/AppleRules.conf, policy=Apple, tag=Apple, enabled=true
+# Apple 规则
+https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/Apple/AppleNoChinaCDNRules.conf, policy=AppleNoChinaCDN, tag=AppleNoChinaCDN, enabled=true
 
-https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/AppleAPIRules.conf, policy=AppleAPI, tag=AppleAPI, enabled=true
+https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/Apple/AppleRules.conf, policy=Apple, tag=Apple, enabled=true
 
-https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/AppleCDNRules.conf, policy=AppleCDN, tag=AppleCDN, enabled=true
+https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/Apple/AppleAPIRules.conf, policy=AppleAPI, tag=AppleAPI, enabled=true
 
-https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/AppleNoChinaCDNRules.conf, policy=AppleNoChinaCDN, tag=AppleNoChinaCDN, enabled=true
+https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/Apple/AppleCDNRules.conf, policy=AppleCDN, tag=AppleCDN, enabled=true
 
 https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/GFWRules.conf, policy=PROXY, tag=FuckGFW, enabled=true
 
-https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/CustomDirect.conf, policy=DIRECT, tag=CustomDirect, enabled=true
+# 自定义的直连
+https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/DirectRules.conf, policy=DIRECT, tag=CustomDirect, enabled=true
 
 https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/BaseRules.conf, policy=DIRECT, tag=BaseRules, enabled=true
 
@@ -82,6 +87,9 @@ https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRe
 ### 对于 FuckRogueSoftware 规则的说明
 
 此规则极其激进，对某些国内软件强屏蔽，包括但不限于广告，跟踪，数据分析，仅保证软件最低程度功能的正常使用，使用需谨慎
+PS: 对抖音全部屏蔽，且对其他字节服务也有（误）杀
+相关域名来自 https://gist.github.com/JamesHopbourn/b5cf9219bdacfa8b6dbb3414276c149b
+在此表示感谢
 
 ```
 https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/FuckRogueSoftware.conf, policy=Advertising, tag=FuckRogueSoftware, enabled=true
@@ -147,4 +155,4 @@ https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonPl
 
 [SS-Rule-Snippet](https://github.com/Hackl0us/SS-Rule-Snippet#%E5%85%B3%E4%BA%8E%E9%A1%B9%E7%9B%AE)
 
-[ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)
+[ACL4SSR](https://github.com/ACL4SSR/ACL4SSR/tree/master)

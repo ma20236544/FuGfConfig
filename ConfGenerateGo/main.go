@@ -10,11 +10,11 @@ import (
 // url
 const (
 	// inbox ad data
-	inboxAdUrl = "https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/AdRulesBeta.conf"
+	inboxAdUrl = "https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/Advertising/AdRulesBeta.conf"
 	// base data
 	baseAdUrl1 = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Advertising/Advertising.list"
 	// CustomAdRules
-	baseAdUrl2 = "https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/CustomAdRules.conf"
+	baseAdUrl2 = "https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/Advertising/AdRules.conf"
 	// ios_rule_script QuantumultX Advertising
 	// url3 = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Advertising/Advertising.list"
 	// ios_rule_script Loon Advertising_Domain
@@ -134,14 +134,14 @@ func policyProcessing(policyName string) {
 	fmt.Println(len(data))
 	// 写入文件
 	FileOperations.WriteFile(data, "./DataFile/ans.txt")
-	FileOperations.WriteFile(data, "F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\LoonRemoteRule\\CustomAdRules.conf")
+	FileOperations.WriteFile(data, "F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\LoonRemoteRule\\Advertising\\AdRules.conf")
 	FileOperations.WriteClashFile(data, "./DataFile/ans1.txt")
 	FileOperations.WriteClashFile(data, "F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Clash\\AdRules.txt")
 	//清除 bataAd 规则
 	var ans1 []string
 	ans1 = append(ans1, data[0])
 	FileOperations.WriteFile(ans1, "./DataFile/inbox.txt")
-	FileOperations.WriteFile(ans1, "F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\LoonRemoteRule\\AdRulesBeta.conf")
+	FileOperations.WriteFile(ans1, "F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\LoonRemoteRule\\Advertising\\AdRulesBeta.conf")
 }
 
 // 规则格式统一
