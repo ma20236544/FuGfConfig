@@ -21,15 +21,11 @@ const (
 	// url4 = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Loon/Advertising/Advertising_Domain.list"
 )
 
-// var filePath = [...]string{
-// 	"./DataFile/inbox.txt",
-// 	"./DataFile/inbox1.txt",
-// 	"./DataFile/base.txt",
-// 	"./DataFile/CustomAdRules.txt"}
-
-var filePath = [...]string{
+var inboxFilePath = [...]string{
 	"F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\LoonRemoteRule\\Advertising\\AdRulesBeta.conf",
-	"./DataFile/inbox1.txt",
+	"./DataFile/inbox1.txt"}
+
+var baseFilePath = [...]string{
 	"./DataFile/base.txt",
 	"F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\LoonRemoteRule\\Advertising\\AdRules.conf"}
 
@@ -47,11 +43,10 @@ func main() {
 	input = "n"
 	if input == "y" || input == "Y" {
 		// 下载文件
-		FileOperations.DownloadFile(inboxAdUrl, filePath[0])
-		FileOperations.DownloadFile(baseAdUrl1, filePath[2])
-		FileOperations.DownloadFile(baseAdUrl2, filePath[3])
-		FileOperations.DownloadFile(inbox1AdUrl, filePath[1])
-		// FileOperations.DownloadFile(url4, filePath[4])
+		// FileOperations.DownloadFile(inboxAdUrl, inboxFilePath[0])
+		FileOperations.DownloadFile(baseAdUrl1, baseFilePath[0])
+		// FileOperations.DownloadFile(baseAdUrl2, baseFilePath[1])
+		FileOperations.DownloadFile(inbox1AdUrl, inboxFilePath[1])
 		println("更新完成")
 	}
 
@@ -67,8 +62,8 @@ func main() {
 // policy processing
 func policyProcessing(policyName string) {
 	// 循环读取文件 构建 base map
-	for i := 2; i <= 3; i++ {
-		var ans = FileOperations.ReadFile(filePath[i])
+	for i := 0; i < len(baseFilePath); i++ {
+		var ans = FileOperations.ReadFile(baseFilePath[i])
 		fmt.Println("base map", i, "共", len(ans), "条数据")
 		// 遍历得到的数据
 		for _, v := range ans {
@@ -96,8 +91,8 @@ func policyProcessing(policyName string) {
 
 	// 循环读取待处理的数据文件
 	var data []string
-	for i := 0; i <= 1; i++ {
-		var ans = FileOperations.ReadFile(filePath[i])
+	for i := 0; i < len(inboxFilePath); i++ {
+		var ans = FileOperations.ReadFile(inboxFilePath[i])
 		fmt.Println("读取待处理数据", i, "，共", len(ans), "条数据")
 		for _, v := range ans {
 			if !strings.HasPrefix(v, "#") &&
@@ -140,7 +135,7 @@ func policyProcessing(policyName string) {
 	fmt.Println("处理后共有", len(data), "条 new 数据")
 
 	// 新数据与老数据合并
-	var ans = FileOperations.ReadFile(filePath[2])
+	var ans = FileOperations.ReadFile("F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\LoonRemoteRule\\Advertising\\AdRules.conf")
 	data = append(data, ans...)
 
 	// 数据结果排序
@@ -162,6 +157,7 @@ func policyProcessing(policyName string) {
 // 规则格式统一
 func formatCorrection(s string) string {
 	s = strings.TrimPrefix(s, ".")
+	s = strings.Replace(s, "\r", "", -1)
 	s = strings.Replace(s, "\n", "", -1)
 	s = strings.Replace(s, " ", "", -1)
 	s = strings.Replace(s, "HOST", "DOMAIN", 1)
