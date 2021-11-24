@@ -71,5 +71,5 @@ payload:
   - DOMAIN-KEYWORD,sspai,DIRECT
   - DOMAIN-SUFFIX,share.weiyun.com,DIRECT
   - DOMAIN-KEYWORD,alibaba,DIRECT
-
+  - DOMAIN-SUFFIX,test-ipv6.com,DIRECT
   - GEOIP,CN
