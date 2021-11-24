@@ -10,11 +10,11 @@ import (
 // url
 const (
 	// inbox ad data
-	inboxAdUrl = "https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/Advertising/AdRulesBeta.conf"
+	// inboxAdUrl = "https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/Advertising/AdRulesBeta.conf"
 	// base data
 	baseAdUrl1 = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Advertising/Advertising.list"
 	// CustomAdRules
-	baseAdUrl2 = "https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/Advertising/AdRules.conf"
+	// baseAdUrl2 = "https://raw.githubusercontent.com/dunLan0/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/Advertising/AdRules.conf"
 	// ios_rule_script QuantumultX Advertising
 	inbox1AdUrl = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Advertising/Advertising.list"
 	// ios_rule_script Loon Advertising_Domain
@@ -29,9 +29,6 @@ var baseFilePath = [...]string{
 	"./DataFile/base.txt",
 	"F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\LoonRemoteRule\\Advertising\\AdRules.conf"}
 
-// "./DataFile/QxAdvertising.txt",
-// "./DataFile/LoonDomainAdvertising.txt"}
-
 var policysMap = make(map[string]string)
 
 func main() {
@@ -39,7 +36,7 @@ func main() {
 	fmt.Println("是否要更新or下载远程数据(y or n)")
 	var input string
 	// fmt.Scanln(&input)
-	// input = "y"
+	input = "y"
 	input = "n"
 	if input == "y" || input == "Y" {
 		// 下载文件
@@ -67,11 +64,7 @@ func policyProcessing(policyName string) {
 		fmt.Println("base map", i, "共", len(ans), "条数据")
 		// 遍历得到的数据
 		for _, v := range ans {
-			if !strings.HasPrefix(v, "#") &&
-				!strings.HasPrefix(v, ";") &&
-				!strings.HasPrefix(v, "\n") &&
-				!strings.Contains(v, "URL-REGEX") {
-				// 忽略注释与 URL-REGEX 规则和空行
+			if !isNote(v) {
 				v = formatCorrection(v)
 
 				if (strings.Count(v, "DOMAIN") > 0 && strings.Count(v, ",") >= 1) ||
@@ -95,10 +88,7 @@ func policyProcessing(policyName string) {
 		var ans = FileOperations.ReadFile(inboxFilePath[i])
 		fmt.Println("读取待处理数据", i, "，共", len(ans), "条数据")
 		for _, v := range ans {
-			if !strings.HasPrefix(v, "#") &&
-				!strings.HasPrefix(v, ";") &&
-				!strings.HasPrefix(v, "\n") &&
-				!strings.Contains(v, "URL-REGEX") {
+			if !isNote(v) {
 				v = formatCorrection(v)
 
 				if v != "" {
@@ -173,4 +163,16 @@ func formatCorrection(s string) string {
 	s = strings.Replace(s, "user-AGENT,", "USER-AGENT", 1)
 
 	return s
+}
+
+func isNote(s string) bool {
+	// 忽略注释与 URL-REGEX 规则和空行
+	if strings.HasPrefix(s, "#") ||
+		strings.HasPrefix(s, ";") ||
+		strings.HasPrefix(s, "\n") ||
+		strings.HasPrefix(s, "//") ||
+		strings.Contains(s, "URL-REGEX") {
+		return true
+	}
+	return false
 }
