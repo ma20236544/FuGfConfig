@@ -1,0 +1,10 @@
+[Host]
+## 腾讯
+*.3gimg.qq.com = server:127.0.0.1
+*.3g.qq.com = server:127.0.0.1
+*.oth.bls.mdt.qq.com = server:127.0.0.1
+*.tbs.imtt.qq.com = server:127.0.0.1
+*.btrace.qq.com = server:127.0.0.1
+*.rqd.uu.qq.com = server:127.0.0.1
+*.rqd.qq.com = server:127.0.0.1
+*.bugly.qq.com = server:127.0.0.1
