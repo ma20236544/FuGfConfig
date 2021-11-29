@@ -47,5 +47,6 @@
 *.pingma.qq.com = 127.0.0.1
 ## 友盟
 *.errlog.umeng.com = 127.0.0.1
+*.aaid.umeng.com = 127.0.0.1
 ## 其他
 *.adsmind.gdtimg.com = 127.0.0.1
