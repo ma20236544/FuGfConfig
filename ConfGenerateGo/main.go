@@ -3,6 +3,7 @@ package main
 import (
 	"ConfGenerateGo/FileOperations"
 	"fmt"
+	"regexp"
 	"sort"
 	"strings"
 )
@@ -107,10 +108,20 @@ func policyProcessing(policyName string) {
 							policysMap[a[1]] = a[0]
 						}
 					} else {
+						// 仅域名或IP
 						if _, ok := policysMap[v]; !ok {
-							b := []string{"DOMAIN-SUFFIX", v, policyName}
-							str = strings.Join(b, ",")
-							policysMap[v] = "DOMAIN-SUFFIX"
+							// if isIPV4(v) || isIPV6(v) {
+							if isIPV4(v) {
+								b := []string{"IP-CIDR", v}
+								// b := []string{"IP-CIDR", v, policyName}
+								str = strings.Join(b, ",")
+								policysMap[v] = "IP-CIDR"
+							} else {
+								b := []string{"DOMAIN-SUFFIX", v}
+								// b := []string{"DOMAIN-SUFFIX", v, policyName}
+								str = strings.Join(b, ",")
+								policysMap[v] = "DOMAIN-SUFFIX"
+							}
 						}
 					}
 					if str != "" {
@@ -175,4 +186,22 @@ func isNote(s string) bool {
 		return true
 	}
 	return false
+}
+
+func isIPV4(s string) bool {
+	// 判断是否为IPV4
+	partIp := "(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])"
+	grammer := partIp + "\\." + partIp + "\\." + partIp + "\\." + partIp
+	matchMe := regexp.MustCompile(grammer)
+
+	return matchMe.MatchString(s)
+}
+
+func isIPV6(s string) bool {
+	// 判断是否为IPV4
+	partIp := "(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])"
+	grammer := partIp + "\\." + partIp + "\\." + partIp + "\\." + partIp
+	matchMe := regexp.MustCompile(grammer)
+
+	return matchMe.MatchString(s)
 }

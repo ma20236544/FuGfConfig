@@ -20,7 +20,6 @@
 *.wspeed.qq.com = 127.0.0.1
 *.pub.idqqimg.com = 127.0.0.1
 *.data.ab.qq.com = 127.0.0.1
-
 *.3gimg.qq.com = 127.0.0.1
 *.cmshow.qq.com = 127.0.0.1
 *.dl_dir.qq.com = 127.0.0.1
@@ -28,7 +27,7 @@
 *.dlied6.qq.com = 127.0.0.1
 *.guanjia.qq.com = 127.0.0.1
 *.h.trace.qq.com = 127.0.0.1
-*.oth.bls.mdt.qq.com = 127.0.0.1
+*.mdt.qq.com = 127.0.0.1
 *.pacaio.match.qq.com = 127.0.0.1
 *.qring-tms.qq.com = 127.0.0.1
 *.show-msgch.qq.com = 127.0.0.1
@@ -42,3 +41,11 @@
 *.a.ac.qq.com = 127.0.0.1
 *.act.qq.com = 127.0.0.1
 *.activeqq.3g.qq.com = 127.0.0.1
+*.log.tbs.qq.com = 127.0.0.1
+*.app-measurement.com = 127.0.0.1
+*.pingmid.qq.com = 127.0.0.1
+*.pingma.qq.com = 127.0.0.1
+## 友盟
+*.errlog.umeng.com = 127.0.0.1
+## 其他
+*.adsmind.gdtimg.com = 127.0.0.1

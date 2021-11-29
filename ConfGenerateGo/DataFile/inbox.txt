@@ -1,1 +1,1 @@
-AND,((USER-AGENT
+DOMAIN,0001.2waky.com
