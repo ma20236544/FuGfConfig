@@ -45,6 +45,8 @@
 *.app-measurement.com = 127.0.0.1
 *.pingmid.qq.com = 127.0.0.1
 *.pingma.qq.com = 127.0.0.1
+*.api-report.q.qq.com = 127.0.0.1
+*.rpt.gdt.qq.com = 127.0.0.1
 ## 友盟
 *.errlog.umeng.com = 127.0.0.1
 *.aaid.umeng.com = 127.0.0.1
