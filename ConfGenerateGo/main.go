@@ -23,12 +23,12 @@ const (
 )
 
 var inboxFilePath = [...]string{
-	"F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\LoonRemoteRule\\Advertising\\AdRulesBeta.conf",
+	"../ConfigFile/Loon/LoonRemoteRule/Advertising/AdRulesBeta.conf",
 	"./DataFile/inbox1.txt"}
 
 var baseFilePath = [...]string{
 	"./DataFile/base.txt",
-	"F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\LoonRemoteRule\\Advertising\\AdRules.conf"}
+	"../ConfigFile/Loon/LoonRemoteRule/Advertising/AdRules.conf"}
 
 var policysMap = make(map[string]string)
 
@@ -37,7 +37,7 @@ func main() {
 	fmt.Println("是否要更新or下载远程数据(y or n)")
 	var input string
 	// fmt.Scanln(&input)
-	input = "y"
+	// input = "y"
 	input = "n"
 	if input == "y" || input == "Y" {
 		// 下载文件
@@ -45,7 +45,7 @@ func main() {
 		FileOperations.DownloadFile(baseAdUrl1, baseFilePath[0])
 		// FileOperations.DownloadFile(baseAdUrl2, baseFilePath[1])
 		FileOperations.DownloadFile(inbox1AdUrl, inboxFilePath[1])
-		println("更新完成")
+		println("更新远程数据完成")
 	}
 
 	// 处理文件
@@ -136,7 +136,7 @@ func policyProcessing(policyName string) {
 	fmt.Println("处理后共有", len(data), "条 new 数据")
 
 	// 新数据与老数据合并
-	var ans = FileOperations.ReadFile("F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\LoonRemoteRule\\Advertising\\AdRules.conf")
+	var ans = FileOperations.ReadFile(baseFilePath[1])
 	data = append(data, ans...)
 
 	// 数据结果排序
@@ -145,14 +145,14 @@ func policyProcessing(policyName string) {
 	fmt.Println("更新后去广告规则共有", len(data))
 	// 写入文件
 	FileOperations.WriteFile(data, "./DataFile/ans.txt")
-	FileOperations.WriteFile(data, "F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\LoonRemoteRule\\Advertising\\AdRules.conf")
+	FileOperations.WriteFile(data, baseFilePath[1])
 	FileOperations.WriteClashFile(data, "./DataFile/ans1.txt")
-	FileOperations.WriteClashFile(data, "F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Clash\\AdRules.txt")
+	FileOperations.WriteClashFile(data, "../ConfigFile/Clash/AdRules.txt")
 	//清除 bataAd 规则
 	var ans1 []string
 	ans1 = append(ans1, data[0])
 	FileOperations.WriteFile(ans1, "./DataFile/inbox.txt")
-	FileOperations.WriteFile(ans1, "F:\\CodeFile\\Project\\FuGfConfig\\ConfigFile\\Loon\\LoonRemoteRule\\Advertising\\AdRulesBeta.conf")
+	FileOperations.WriteFile(ans1, inboxFilePath[0])
 }
 
 // 规则格式统一
