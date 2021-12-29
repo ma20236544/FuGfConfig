@@ -37,8 +37,8 @@ func main() {
 	fmt.Println("是否要更新or下载远程数据(y or n)")
 	var input string
 	// fmt.Scanln(&input)
-	// input = "y"
-	input = "n"
+	input = "y"
+	// input = "n"
 	if input == "y" || input == "Y" {
 		// 下载文件
 		// FileOperations.DownloadFile(inboxAdUrl, inboxFilePath[0])
