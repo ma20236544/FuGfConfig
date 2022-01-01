@@ -13,3 +13,5 @@ payload:
   - DOMAIN-KEYWORD,githubusercontent,PROXY
   - DOMAIN-KEYWORD,passcloud,PROXY
   - DOMAIN-KEYWORD,joplin,PROXY
+  - DOMAIN-KEYWORD,dropbox,PROXY
+  - DOMAIN-KEYWORD,dropboxapi,PROXY
