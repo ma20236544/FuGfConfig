@@ -6,11 +6,11 @@
 
 ## 支持
 
-本项目对 Quan X、Loon 提供完全支持
+本项目对 Quan X、Loon、AdGuardHome 提供完全支持
 
 对小火箭提供能用的支持（仅仅是能用
 
-优先级： Loon > Quan X > 小火箭
+优先级： AdGuardHome = Loon > Quan X > 小火箭
 
 ## 使用方法
 
