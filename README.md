@@ -106,10 +106,14 @@ https://raw.githubusercontent.com/dunlanl/FuGfConfig/main/ConfigFile/Loon/FuckRo
 请参考 [这篇文章](https://blog.royli.dev/2019/better-proxy-rules-for-apple-services)
 
 对于本项目
+
 AppleRules 是与本地化息息相关的规则，比如地图、天气、查找、Facetime、Apple Pay
 ( iCloud 上传与下载也归于此规则集
+
 AppleCDNRules 是苹果的全球 CDN
+
 AppleNoChinaCDNRules 是大陆没有的 CDN 节点
+
 AppleAPIRules 是苹果的 API 域名
 
 #### 使用中国区账号（App Store + iCloud）
