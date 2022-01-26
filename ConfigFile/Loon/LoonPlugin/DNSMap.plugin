@@ -88,4 +88,4 @@ weibo.com = server:https://doh.pub/dns-query
 *.10010.com = server:https://doh.pub/dns-query
 *.10010.cn = server:https://doh.pub/dns-query
 ## 全局
-*.cn = server:https://doh.pub/dns-query
+*.cn = server:https://i.passcloud.xyz/dns-query

@@ -143,6 +143,12 @@ AppleAPIRules 代理
 https://raw.githubusercontent.com/dunlanl/FuGfConfig/main/ConfigFile/Loon/LoonPlugin/DNSMap.plugin, tag=DNS Map, enabled=true
 ```
 
+### 光明的未来
+
+可以预见的未来越来越光明啦
+
+特此提前准备了白名单模式，随时准备敬献。
+
 ## 感谢
 
 本项目的数据大部分来自一下项目，在此对他们表示感谢（以下排名不分先后
