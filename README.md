@@ -116,18 +116,26 @@ AppleNoChinaCDNRules 是大陆没有的 CDN 节点
 
 AppleAPIRules 是苹果的 API 域名
 
+请把 NoChinaCDN 和 APIRules 放在最前面
+
 #### 使用中国区账号（App Store + iCloud）
 
 AppleRules 直连
+
 AppleCDNRules 直连
+
 AppleNoChinaCDNRules 代理
+
 AppleAPIRules 直连
 
 #### 使用美国区账号（App Store + iCloud）
 
 AppleRules 直连
+
 AppleCDNRules 直连
+
 AppleNoChinaCDNRules 代理
+
 AppleAPIRules 代理
 
 建议 AppleAPIRules 依然直连，上文是根据上述文章给出的建议，请结合自身情况使用
