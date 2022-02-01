@@ -1,0 +1,5 @@
+127.0.0.1  localhost
+::1  localhost
+
+# [mi WiFi]
+127.0.0.1 api.miwifi.com
