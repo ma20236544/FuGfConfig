@@ -6,20 +6,16 @@ import (
 	"regexp"
 	"sort"
 	"strings"
+
+	"golang.org/x/tools/go/analysis/passes/ifaceassert"
 )
 
 // url
 const (
-	// inbox ad data
-	// inboxAdUrl = "https://raw.githubusercontent.com/dunlanl/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/Advertising/AdRulesBeta.conf"
 	// base data
 	baseAdUrl1 = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Advertising/Advertising.list"
-	// CustomAdRules
-	// baseAdUrl2 = "https://raw.githubusercontent.com/dunlanl/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/Advertising/AdRules.conf"
 	// ios_rule_script QuantumultX Advertising
 	inbox1AdUrl = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Advertising/Advertising.list"
-	// ios_rule_script Loon Advertising_Domain
-	// url4 = "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Loon/Advertising/Advertising_Domain.list"
 )
 
 var inboxFilePath = [...]string{
@@ -41,9 +37,7 @@ func main() {
 	// input = "n"
 	if input == "y" || input == "Y" {
 		// 下载文件
-		// FileOperations.DownloadFile(inboxAdUrl, inboxFilePath[0])
 		FileOperations.DownloadFile(baseAdUrl1, baseFilePath[0])
-		// FileOperations.DownloadFile(baseAdUrl2, baseFilePath[1])
 		FileOperations.DownloadFile(inbox1AdUrl, inboxFilePath[1])
 		println("更新远程数据完成")
 	}
@@ -65,75 +59,76 @@ func policyProcessing(policyName string) {
 		fmt.Println("base map", i, "共", len(ans), "条数据")
 		// 遍历得到的数据
 		for _, v := range ans {
-			if !isNote(v) {
-				v = formatCorrection(v)
+			if isNote(v) {
+				continue
+			}
+			v = formatCorrection(v)
 
-				if (strings.Count(v, "DOMAIN") > 0 && strings.Count(v, ",") >= 1) ||
-					(strings.Count(v, "IP-CIDR") > 0 || strings.Count(v, "IP-CIDR6") > 0) ||
-					(strings.Count(v, "USER-AGENT") > 0 && strings.Count(v, ",") >= 1) {
-					// 如果包含 DOMAIN 或者 IP 或者 USER-AGENT
-					var data = strings.Split(v, ",")
-					policysMap[data[1]] = data[0]
-				} else {
-					policysMap[v] = "DOMAIN"
-				}
+			if (strings.Count(v, "DOMAIN") > 0 && strings.Count(v, ",") >= 1) ||
+				(strings.Count(v, "IP-CIDR") > 0 || strings.Count(v, "IP-CIDR6") > 0) ||
+				(strings.Count(v, "USER-AGENT") > 0 && strings.Count(v, ",") >= 1) {
+				// 如果包含 DOMAIN 或者 IP 或者 USER-AGENT
+				var data = strings.Split(v, ",")
+				policysMap[data[1]] = data[0]
+			} else {
+				policysMap[v] = "DOMAIN"
 			}
 		}
 	}
 
-	fmt.Println("基础数据库构建完成，共", len(policysMap), "条数据")
+	fmt.Println("基础数据库构建完成,共", len(policysMap), "条数据")
 
 	// 循环读取待处理的数据文件
 	var data []string
 	for i := 0; i < len(inboxFilePath); i++ {
 		var ans = FileOperations.ReadFile(inboxFilePath[i])
-		fmt.Println("读取待处理数据", i, "，共", len(ans), "条数据")
+		fmt.Println("读取待处理数据", i, ",共", len(ans), "条数据")
 		for _, v := range ans {
-			if !isNote(v) {
-				v = formatCorrection(v)
-
-				if v != "" {
-					var str string
-					if strings.Contains(v, ",") {
-						var a = strings.Split(v, ",")
-						if _, ok := policysMap[a[1]]; !ok {
-							b1 := []string{a[0], a[1]}
-							// b1 := []string{a[0], a[1], policyName}
-							b2 := []string{a[0], a[1], "no-resolve"}
-							if strings.Contains(v, "IP-CIDR") || strings.Contains(v, "IP-CIDR6") {
-								str = strings.Join(b2, ",")
-							} else {
-								str = strings.Join(b1, ",")
-							}
-							policysMap[a[1]] = a[0]
-						}
+			if isNote(v) {
+				continue
+			}
+			v = formatCorrection(v)
+			if v == "" {
+				continue
+			}
+			var str string
+			if strings.Contains(v, ",") {
+				var a = strings.Split(v, ",")
+				if _, ok := policysMap[a[1]]; !ok {
+					b1 := []string{a[0], a[1]}
+					// b1 := []string{a[0], a[1], policyName}
+					b2 := []string{a[0], a[1], "no-resolve"}
+					if strings.Contains(v, "IP-CIDR") || strings.Contains(v, "IP-CIDR6") {
+						str = strings.Join(b2, ",")
 					} else {
-						// 仅域名或IP
-						if _, ok := policysMap[v]; !ok {
-							// if isIPV4(v) || isIPV6(v) {
-							if isIPV4(v) {
-								b := []string{"IP-CIDR", v}
-								// b := []string{"IP-CIDR", v, policyName}
-								str = strings.Join(b, ",")
-								policysMap[v] = "IP-CIDR"
-							} else {
-								b := []string{"DOMAIN-SUFFIX", v}
-								// b := []string{"DOMAIN-SUFFIX", v, policyName}
-								str = strings.Join(b, ",")
-								policysMap[v] = "DOMAIN-SUFFIX"
-							}
-						}
+						str = strings.Join(b1, ",")
 					}
-					if str != "" {
-						data = append(data, str)
+					policysMap[a[1]] = a[0]
+				}
+			} else {
+				// 仅域名或IP
+				if _, ok := policysMap[v]; !ok {
+					// if isIPV4(v) || isIPV6(v) {
+					if isIPV4(v) {
+						b := []string{"IP-CIDR", v}
+						// b := []string{"IP-CIDR", v, policyName}
+						str = strings.Join(b, ",")
+						policysMap[v] = "IP-CIDR"
+					} else {
+						b := []string{"DOMAIN-SUFFIX", v}
+						// b := []string{"DOMAIN-SUFFIX", v, policyName}
+						str = strings.Join(b, ",")
+						policysMap[v] = "DOMAIN-SUFFIX"
 					}
 				}
-
+			}
+			if str != "" {
+				data = append(data, str)
 			}
 		}
 	}
 
-	fmt.Println("处理后共有", len(data), "条 new 数据")
+	fmt.Println("处理后共有 ", len(data), " 条 new 数据")
 
 	// 新数据与老数据合并
 	var ans = FileOperations.ReadFile(baseFilePath[1])
@@ -142,7 +137,7 @@ func policyProcessing(policyName string) {
 	// 数据结果排序
 	sort.Strings(data)
 
-	fmt.Println("更新后去广告规则共有", len(data))
+	fmt.Println("更新后去广告规则共有 ", len(data))
 	// 写入文件
 	FileOperations.WriteFile(data, "./DataFile/ans.txt")
 	FileOperations.WriteFile(data, baseFilePath[1])
@@ -198,7 +193,8 @@ func isIPV4(s string) bool {
 }
 
 func isIPV6(s string) bool {
-	// 判断是否为IPV4
+	//不可用
+	// 判断是否为IPV6
 	partIp := "(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])"
 	grammer := partIp + "\\." + partIp + "\\." + partIp + "\\." + partIp
 	matchMe := regexp.MustCompile(grammer)

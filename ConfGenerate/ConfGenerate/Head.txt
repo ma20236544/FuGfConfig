@@ -1,6 +1,0 @@
-﻿[General]
-bypass-system = true
-dns-server = system,https://dns.google/dns-query,https://1.1.1.1/dns-query,https://dns.alidns.com/dns-query,8.8.8.8,8.8.4.4,1.1.1.1,https://dns.google/resolve,https://dns.adguard.com/dns-query,quic://dns.adguard.com,https://dns.quad9.net/dns-query,https://rubyfish.cn/dns-query,https://cloudflare-dns.com/dns-query,https://doh.opendns.com
-tun-excluded-routes = 0.0.0.0/31
-update-url = https://raw.githubusercontent.com/dunLan0/ShadowrocketConfig/main/ConfigFile/fg.conf
-test

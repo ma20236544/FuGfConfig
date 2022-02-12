@@ -151,6 +151,17 @@ AppleAPIRules 代理
 https://raw.githubusercontent.com/dunlanl/FuGfConfig/main/ConfigFile/Loon/LoonPlugin/DNSMap.plugin, tag=DNS Map, enabled=true
 ```
 
+#### DNSMapAd
+
+对一些广告域名 DNS 解析重定向至 `127.0.0.1`
+
+有用没用的诸君自己看着用吧
+
+```
+# DNS 去广告映射
+https://raw.githubusercontent.com/dunlanl/FuGfConfig/main/ConfigFile/Loon/LoonPlugin/DNSMapAd.plugin, tag=DNS Map Ad, enabled=true
+```
+
 ### 光明的未来
 
 可以预见的未来越来越光明啦
