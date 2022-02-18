@@ -6,8 +6,6 @@ import (
 	"regexp"
 	"sort"
 	"strings"
-
-	"golang.org/x/tools/go/analysis/passes/ifaceassert"
 )
 
 // url

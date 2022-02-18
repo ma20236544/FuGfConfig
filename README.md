@@ -87,9 +87,6 @@ https://raw.githubusercontent.com/dunlanl/FuGfConfig/main/ConfigFile/Loon/LoonRe
 ### 对于 FuckRogueSoftware 规则的说明
 
 此规则极其激进，对某些国内软件强屏蔽，包括但不限于广告，跟踪，数据分析，仅保证软件最低程度功能的正常使用，使用需谨慎
-PS: 对抖音全部屏蔽，且对其他字节服务也有（误）杀
-相关域名来自 https://gist.github.com/JamesHopbourn/b5cf9219bdacfa8b6dbb3414276c149b
-在此表示感谢
 
 ```
 https://raw.githubusercontent.com/dunlanl/FuGfConfig/main/ConfigFile/Loon/FuckRogueSoftware.conf, policy=Advertising, tag=FuckRogueSoftware, enabled=true
