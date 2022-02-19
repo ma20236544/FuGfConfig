@@ -159,6 +159,17 @@ https://raw.githubusercontent.com/dunlanl/FuGfConfig/main/ConfigFile/Loon/LoonPl
 https://raw.githubusercontent.com/dunlanl/FuGfConfig/main/ConfigFile/Loon/LoonPlugin/DNSMapAd.plugin, tag=DNS Map Ad, enabled=true
 ```
 
+#### 抖音屏蔽
+
+部分规则来自 https://gist.github.com/JamesHopbourn/b5cf9219bdacfa8b6dbb3414276c149b
+
+在此表示感谢
+
+```
+# FuckDouyin
+https://raw.githubusercontent.com/dunlanl/FuGfConfig/main/ConfigFile/Loon/LoonPlugin/FuckDouyin.plugin, proxy=Advertising, tag=Fuck Douyin, enabled=true
+```
+
 ### 光明的未来
 
 可以预见的未来越来越光明啦
