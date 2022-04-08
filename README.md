@@ -52,6 +52,9 @@ DirectRules
 BaseRules
 ```
 
+若有精准去广告的需求，请在未来使用 `PreciseNoAd`，此规则集会尽可能克制，确保对正常功能的影响到最低
+(现阶段并不完善，规则不完整，先鸽着
+
 ```
 # 对疑似误杀的广告分流规则的修正
 https://raw.githubusercontent.com/dunlanl/FuGfConfig/main/ConfigFile/Loon/LoonRemoteRule/Advertising/NoAdProxyRules.conf, policy=PROXY, tag=NoAdProxy, enabled=true
